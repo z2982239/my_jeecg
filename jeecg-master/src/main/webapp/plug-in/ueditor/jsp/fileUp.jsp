@@ -1,11 +1,13 @@
-    <%@page import="java.io.File"%>
-        <%@page import="java.util.Properties"%>
-        <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-        <%@ page import="org.jeecgframework.core.servlet.Uploader" %>
-        <%@ page import="java.io.FileInputStream" %>
+
+<%@page import="java.io.File"%>
+<%@page import="java.util.Properties"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<%@ page import="org.jeecgframework.core.servlet.Uploader"%>
+<%@ page import="java.io.FileInputStream"%>
 
 
-            <%
+<%
     request.setCharacterEncoding( Uploader.ENCODEING );
     response.setCharacterEncoding( Uploader.ENCODEING );
     

@@ -1,192 +1,183 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta charset="utf-8" />
-    <title><t:mutiLang langKey="jeect.platform"/></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="stylesheet" href="plug-in/jquery/jquery.contextmenu.css"/>
-    <!-- bootstrap & fontawesome -->
-    <link rel="stylesheet" href="plug-in/ace/css/bootstrap.css" />
-    <link rel="stylesheet" href="plug-in/ace/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="plug-in/accordion/css/accordion.css">
-    <!-- text fonts -->
-    <link rel="stylesheet" href="plug-in/ace/css/ace-fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta charset="utf-8" />
+<title><t:mutiLang langKey="jeect.platform" /></title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<link rel="stylesheet" href="plug-in/jquery/jquery.contextmenu.css" />
+<!-- bootstrap & fontawesome -->
+<link rel="stylesheet" href="plug-in/ace/css/bootstrap.css" />
+<link rel="stylesheet" href="plug-in/ace/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css"
+	href="plug-in/accordion/css/accordion.css">
+<!-- text fonts -->
+<link rel="stylesheet" href="plug-in/ace/css/ace-fonts.css" />
 
-    <%--<link rel="stylesheet" href="plug-in/ace/css/jquery-ui.css" />--%>
-    <!-- ace styles -->
-    <link rel="stylesheet" href="plug-in/ace/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+<%--<link rel="stylesheet" href="plug-in/ace/css/jquery-ui.css" />--%>
+<!-- ace styles -->
+<link rel="stylesheet" href="plug-in/ace/css/ace.css"
+	class="ace-main-stylesheet" id="main-ace-style" />
 
-    <!--[if lte IE 9]>
+<!--[if lte IE 9]>
     <link rel="stylesheet" href="plug-in/ace/css/ace-part2.css" class="ace-main-stylesheet" />
     <![endif]-->
 
-    <!--[if lte IE 9]>
+<!--[if lte IE 9]>
     <link rel="stylesheet" href="plug-in/ace/css/ace-ie.css" />
     <![endif]-->
-    <!-- ace settings handler -->
-    <script src="plug-in/ace/js/ace-extra.js"></script>
+<!-- ace settings handler -->
+<script src="plug-in/ace/js/ace-extra.js"></script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
-    <!--[if lte IE 8]>
+<!--[if lte IE 8]>
     <script src="plug-in/ace/js/html5shiv.js"></script>
     <script src="plug-in/ace/js/respond.js"></script>
     <![endif]-->
-    <style>
-        .shortcut{
-            margin-left: 5px;
-            margin-right: 15px;
-            margin-top: 8px;
-            height: 62px;
-            float: right;
-        }
-        .shortcut li{
-            float: left;
-            list-style: none;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-        i[class='fa fa-times']{
-            margin-left:2px;
-            margin-right: -6px;
-            cursor: pointer;
-        }
-        .ace-nav > li.light-blue > a{
-            background-color:#438EB9;
-        }
-    </style>
+<style>
+.shortcut {
+	margin-left: 5px;
+	margin-right: 15px;
+	margin-top: 8px;
+	height: 62px;
+	float: right;
+}
+
+.shortcut li {
+	float: left;
+	list-style: none;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+i[class='fa fa-times'] {
+	margin-left: 2px;
+	margin-right: -6px;
+	cursor: pointer;
+}
+
+.ace-nav>li.light-blue>a {
+	background-color: #438EB9;
+}
+</style>
 </head>
 
 <body class="no-skin">
-<!-- #section:basics/navbar.layout -->
-<div id="navbar" class="navbar navbar-default">
-    <script type="text/javascript">
+	<!-- #section:basics/navbar.layout -->
+	<div id="navbar" class="navbar navbar-default">
+		<script type="text/javascript">
         try{ace.settings.check('navbar' , 'fixed')}catch(e){}
     </script>
 
-    <div class="navbar-container" id="navbar-container">
-        <%--<img src="plug-in/pdmis/images/head.jpg" alt="">--%>
-        <!-- #section:basics/sidebar.mobile.toggle -->
-        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
-            <span class="sr-only">Toggle sidebar</span>
+		<div class="navbar-container" id="navbar-container">
+			<%--<img src="plug-in/pdmis/images/head.jpg" alt="">--%>
+			<!-- #section:basics/sidebar.mobile.toggle -->
+			<button type="button" class="navbar-toggle menu-toggler pull-left"
+				id="menu-toggler" data-target="#sidebar">
+				<span class="sr-only">Toggle sidebar</span> <span class="icon-bar"></span>
 
-            <span class="icon-bar"></span>
+				<span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
 
-            <span class="icon-bar"></span>
+			<!-- /section:basics/sidebar.mobile.toggle -->
+			<div class="navbar-header pull-left" style="margin-top: 10px;">
+				<!-- #section:basics/navbar.layout.brand -->
+				<a href="#" class="navbar-brand"> <small> <!-- <i class="fa fa-leaf"></i> -->
+						<t:mutiLang langKey="jeect.platform" />
+				</small>
+				</a>
+				<!-- /section:basics/navbar.layout.brand -->
 
-            <span class="icon-bar"></span>
-        </button>
+				<!-- #section:basics/navbar.toggle -->
 
-        <!-- /section:basics/sidebar.mobile.toggle -->
-        <div class="navbar-header pull-left" style="margin-top: 10px;">
-            <!-- #section:basics/navbar.layout.brand -->
-            <a href="#" class="navbar-brand">
-                <small>
-                    <!-- <i class="fa fa-leaf"></i> -->
-                    <t:mutiLang langKey="jeect.platform"/>
-                </small>
-            </a>
-            <!-- /section:basics/navbar.layout.brand -->
+				<!-- /section:basics/navbar.toggle -->
+			</div>
 
-            <!-- #section:basics/navbar.toggle -->
+			<!-- #section:basics/navbar.dropdown -->
+			<div class="navbar-buttons navbar-header pull-right"
+				role="navigation">
+				<ul class="nav ace-nav">
+					<!-- #section:basics/navbar.user_menu -->
+					<li class="light-blue" style="margin-top: 16px;"><a
+						data-toggle="dropdown" href="#" class="dropdown-toggle"> <%--<img class="nav-user-photo" src="plug-in/ace/avatars/user.jpg" alt="Jason's Photo" />--%>
+							<span class="user-info"> <small style="color: #D50001;">欢迎,${userName }</small>
+								<span style="color: #CC33FF"> <span
+									style="color: #000000"><t:mutiLang langKey="common.role" />:</span>
+									<span style="color: #000000">${roleName }</span>
+							</span> <i class="ace-icon fa fa-caret-down"></i></a>
 
-            <!-- /section:basics/navbar.toggle -->
-        </div>
+						<ul
+							class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+							<li><a
+								href="javascript:add('<t:mutiLang langKey="common.change.password"/>','userController.do?changepassword','',550,200)">
+									<i class="ace-icon fa fa-cog"></i> <t:mutiLang
+										langKey="common.change.password" />
+							</a></li>
 
-        <!-- #section:basics/navbar.dropdown -->
-        <div class="navbar-buttons navbar-header pull-right" role="navigation">
-            <ul class="nav ace-nav">
-                <!-- #section:basics/navbar.user_menu -->
-                <li class="light-blue" style="margin-top: 16px;">
-                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        <%--<img class="nav-user-photo" src="plug-in/ace/avatars/user.jpg" alt="Jason's Photo" />--%>
-								<span class="user-info">
-									<small style="color:#D50001;">欢迎,${userName }</small>
-									<span style="color: #CC33FF">
-                    <span style="color: #000000"><t:mutiLang langKey="common.role"/>:</span>
-                    <span style="color: #000000">${roleName }</span>
-								</span>
+							<li><a
+								href="javascript:openwindow('<t:mutiLang langKey="common.profile"/>','userController.do?userinfo')">
+									<i class="ace-icon fa fa-user"></i> <t:mutiLang
+										langKey="common.profile" />
+							</a></li>
+							<li><a
+								href="javascript:openwindow('<t:mutiLang langKey="common.ssms.getSysInfos"/>','tSSmsController.do?getSysInfos')">
+									<i class="ace-icon fa fa-user"></i> <t:mutiLang
+										langKey="common.ssms.getSysInfos" />
+							</a></li>
+							<li><a
+								href="javascript:add('<t:mutiLang langKey="common.change.style"/>','userController.do?changestyle','',550,200)">
+									<i class="ace-icon fa fa-user"></i> <t:mutiLang
+										langKey="common.my.style" />
+							</a></li>
 
-								<i class="ace-icon fa fa-caret-down"></i>
-                    </a>
+							<li><a href="javascript:clearLocalstorage()"> <i
+									class="ace-icon fa fa-warning"></i> <t:mutiLang
+										langKey="common.clear.localstorage" />
+							</a></li>
 
-                    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                        <li>
-                            <a href="javascript:add('<t:mutiLang langKey="common.change.password"/>','userController.do?changepassword','',550,200)">
-                                <i class="ace-icon fa fa-cog"></i>
-                                <t:mutiLang langKey="common.change.password"/>
-                            </a>
-                        </li>
+							<li class="divider"></li>
 
-                        <li>
-                            <a href="javascript:openwindow('<t:mutiLang langKey="common.profile"/>','userController.do?userinfo')">
-                                <i class="ace-icon fa fa-user"></i>
-                                <t:mutiLang langKey="common.profile"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:openwindow('<t:mutiLang langKey="common.ssms.getSysInfos"/>','tSSmsController.do?getSysInfos')">
-                                <i class="ace-icon fa fa-user"></i>
-                                <t:mutiLang langKey="common.ssms.getSysInfos"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:add('<t:mutiLang langKey="common.change.style"/>','userController.do?changestyle','',550,200)">
-                                <i class="ace-icon fa fa-user"></i>
-                                <t:mutiLang langKey="common.my.style"/>
-                            </a>
-                        </li>
+							<li><a href="javascript:logout()"> <i
+									class="ace-icon fa fa-power-off"></i> <t:mutiLang
+										langKey="common.logout" />
+							</a></li>
+						</ul></li>
 
-                        <li>
-                            <a href="javascript:clearLocalstorage()">
-                                <i class="ace-icon fa fa-warning"></i>
-                                <t:mutiLang langKey="common.clear.localstorage"/>
-                            </a>
-                        </li>
+					<!-- /section:basics/navbar.user_menu -->
+				</ul>
+			</div>
+			<div>
+				<tr style="height: 80px;">
+					<td colspan="2">
+						<ul class="shortcut">
+							<!-- 动态生成并赋值过来 -->
+						</ul>
+					</td>
+				</tr>
+			</div>
+			<!-- /section:basics/navbar.dropdown -->
+		</div>
+		<!-- /.navbar-container -->
+	</div>
 
-                        <li class="divider"></li>
-
-                        <li>
-                            <a href="javascript:logout()">
-                                <i class="ace-icon fa fa-power-off"></i>
-                                <t:mutiLang langKey="common.logout"/>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <!-- /section:basics/navbar.user_menu -->
-            </ul>
-        </div>
-        <div>
-            <tr style="height: 80px;">
-                <td colspan="2">
-                    <ul class="shortcut">
-                        <!-- 动态生成并赋值过来 -->
-                    </ul>
-                </td>
-            </tr>
-        </div>
-        <!-- /section:basics/navbar.dropdown -->
-    </div><!-- /.navbar-container -->
-</div>
-
-<!-- /section:basics/navbar.layout -->
-<div class="main-container" id="main-container">
-    <script type="text/javascript">
+	<!-- /section:basics/navbar.layout -->
+	<div class="main-container" id="main-container">
+		<script type="text/javascript">
         try{ace.settings.check('main-container' , 'fixed')}catch(e){}
     </script>
 
-    <!-- #section:basics/sidebar -->
-    <div id="sidebar" class="sidebar                  responsive">
-        <script type="text/javascript">
+		<!-- #section:basics/sidebar -->
+		<div id="sidebar" class="sidebar                  responsive">
+			<script type="text/javascript">
             try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
         </script>
 
-        <%--<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+			<%--<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 			<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
 				<button class="btn btn-success">
 					<i class="ace-icon fa fa-signal"></i>
@@ -217,62 +208,64 @@
 
 				<span class="btn btn-danger"></span>
 			</div>
-		</div>--%><!-- /.sidebar-shortcuts -->
+		</div>--%>
+			<!-- /.sidebar-shortcuts -->
 
-        <ul class="nav nav-list">
-            <li class="">
-                <a  href="javascript:loadModule('首页','loginController.do?home')">
-                    <i class="menu-icon fa fa-home"></i>
-                    <span class="menu-text"> 首页 </span>
-                </a>
+			<ul class="nav nav-list">
+				<li class=""><a
+					href="javascript:loadModule('首页','loginController.do?home')"> <i
+						class="menu-icon fa fa-home"></i> <span class="menu-text">
+							首页 </span>
+				</a> <b class="arrow"></b></li>
+				<t:menu style="diy" menuFun="${menuMap}"></t:menu>
+			</ul>
+			<!-- /.nav-list -->
 
-                <b class="arrow"></b>
-            </li>
-            <t:menu style="diy" menuFun="${menuMap}"></t:menu>
-        </ul><!-- /.nav-list -->
+			<!-- #section:basics/sidebar.layout.minimize -->
+			<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+				<i class="ace-icon fa fa-angle-double-left"
+					data-icon1="ace-icon fa fa-angle-double-left"
+					data-icon2="ace-icon fa fa-angle-double-right"></i>
+			</div>
 
-        <!-- #section:basics/sidebar.layout.minimize -->
-        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-            <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
-        </div>
-
-        <!-- /section:basics/sidebar.layout.minimize -->
-        <script type="text/javascript">
+			<!-- /section:basics/sidebar.layout.minimize -->
+			<script type="text/javascript">
             try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
         </script>
-    </div>
-    <div class="main-content" >
-        <!-- /section:basics/sidebar -->
-        <!-- #section:basics/content.breadcrumbs -->
-        <div class="breadcrumbs" id="breadcrumbs" style="display:none">
-            <script type="text/javascript">
+		</div>
+		<div class="main-content">
+			<!-- /section:basics/sidebar -->
+			<!-- #section:basics/content.breadcrumbs -->
+			<div class="breadcrumbs" id="breadcrumbs" style="display: none">
+				<script type="text/javascript">
                 try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
             </script>
 
-            <ul class="breadcrumb">
-                <li>
-                    <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="#">首页</a>
-                </li>
-            </ul><!-- /.breadcrumb -->
+				<ul class="breadcrumb">
+					<li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">首页</a>
+					</li>
+				</ul>
+				<!-- /.breadcrumb -->
 
-            <!-- #section:basics/content.searchbox -->
-            <div class="nav-search" id="nav-search">
-                <form class="form-search">
-							<span class="input-icon">
-								<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-								<i class="ace-icon fa fa-search nav-search-icon"></i>
-							</span>
-                </form>
-            </div><!-- /.nav-search -->
+				<!-- #section:basics/content.searchbox -->
+				<div class="nav-search" id="nav-search">
+					<form class="form-search">
+						<span class="input-icon"> <input type="text"
+							placeholder="Search ..." class="nav-search-input"
+							id="nav-search-input" autocomplete="off" /> <i
+							class="ace-icon fa fa-search nav-search-icon"></i>
+						</span>
+					</form>
+				</div>
+				<!-- /.nav-search -->
 
-            <!-- /section:basics/content.searchbox -->
-        </div>
+				<!-- /section:basics/content.searchbox -->
+			</div>
 
-        <!-- /section:basics/content.breadcrumbs -->
-        <div class="page-content" style="padding:0px" >
-            <!-- #section:settings.box -->
-            <%--<div class="ace-settings-container" id="ace-settings-container">
+			<!-- /section:basics/content.breadcrumbs -->
+			<div class="page-content" style="padding: 0px">
+				<!-- #section:settings.box -->
+				<%--<div class="ace-settings-container" id="ace-settings-container">
 				<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
 					<i class="ace-icon fa fa-cog bigger-130"></i>
 				</div>
@@ -358,25 +351,32 @@ fa fa-times
 						<!-- /section:basics/sidebar.options -->
 					</div><!-- /.pull-left -->
 				</div><!-- /.ace-settings-box -->
-			</div>--%><!-- /.ace-settings-container -->
+			</div>--%>
+				<!-- /.ace-settings-container -->
 
-            <!-- /section:settings.box -->
-            <div class="page-content-area" data-ajax-content="false"  >
-                <div id="tabs">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist" style="height: 35px;">
-                        <li role="presentation" class="active"><a href="#tabs-1" aria-controls="tabs-1" role="tab" data-toggle="tab">首页<i class="fa fa-times"></i></a></li>
-                    </ul>
+				<!-- /section:settings.box -->
+				<div class="page-content-area" data-ajax-content="false">
+					<div id="tabs">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist" style="height: 35px;">
+							<li role="presentation" class="active"><a href="#tabs-1"
+								aria-controls="tabs-1" role="tab" data-toggle="tab">首页<i
+									class="fa fa-times"></i></a></li>
+						</ul>
 
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div id="tabs-1" style="padding:0px" role="tabpanel" class="tab-pane active">
-                            <iframe style="width:100%;height:700px;margin:0px;padding:0px" scrolling="auto" frameborder="0" id="center"  src="loginController.do?home" ></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <%--<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div id="tabs-1" style="padding: 0px" role="tabpanel"
+								class="tab-pane active">
+								<iframe
+									style="width: 100%; height: 700px; margin: 0px; padding: 0px"
+									scrolling="auto" frameborder="0" id="center"
+									src="loginController.do?home"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<%--<div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
                 <ul id="myTabs" class="nav nav-tabs" role="tablist" style="height: 35px;">
                     <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
                     <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
@@ -403,100 +403,114 @@ fa fa-times
                     </div>
                 </div>
             </div>--%>
-        </div>
-    </div>
+			</div>
+		</div>
 
 
-    <div class="footer">
-        <div class="footer-inner">
-            <!-- #section:basics/footer -->
-            <div class="footer-content">
-						<span class="bigger-120">
-							<span class="blue bolder">JEECG</span>
-							 Application &copy; <t:mutiLang langKey="system.version.number"/>
-						</span>
+		<div class="footer">
+			<div class="footer-inner">
+				<!-- #section:basics/footer -->
+				<div class="footer-content">
+					<span class="bigger-120"> <span class="blue bolder">JEECG</span>
+						Application &copy; <t:mutiLang langKey="system.version.number" />
+					</span> &nbsp; &nbsp; <span class="action-buttons"> <a href="#">
+							<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+					</a> <a href="#"> <i
+							class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+					</a> <a href="#"> <i
+							class="ace-icon fa fa-rss-square orange bigger-150"></i>
+					</a>
+					</span>
+				</div>
 
-                &nbsp; &nbsp;
-						<span class="action-buttons">
-							<a href="#">
-                                <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-                            </a>
+				<!-- /section:basics/footer -->
+			</div>
+		</div>
 
-							<a href="#">
-                                <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
-                            </a>
+		<a href="#" id="btn-scroll-up"
+			class="btn-scroll-up btn btn-sm btn-inverse"> <i
+			class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+		</a>
+	</div>
+	<!-- /.main-container -->
+	<!-- basic scripts -->
 
-							<a href="#">
-                                <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
-                            </a>
-						</span>
-            </div>
-
-            <!-- /section:basics/footer -->
-        </div>
-    </div>
-
-    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-    </a>
-</div><!-- /.main-container -->
-<!-- basic scripts -->
-
-<!--[if !IE]> -->
-<script type="text/javascript">
+	<!--[if !IE]> -->
+	<script type="text/javascript">
     window.jQuery || document.write("<script src='plug-in/ace/js/jquery.js'>"+"<"+"/script>");
 </script>
 
-<!-- <![endif]-->
-<div id="changestylePanel" style="display:none" ><form id="formobj"  action="userController.do?savestyle" name="formobj" method="post">
-    <table style="width: 550px" cellpadding="0" cellspacing="1" class="formtable">
-        <tr><td >风格</td></tr>
-        <tr>
-            <td class="value"><input type="radio" value="default" name="indexStyle" /> <span>经典风格</span></td>
-        </tr>
-        <!--
+	<!-- <![endif]-->
+	<div id="changestylePanel" style="display: none">
+		<form id="formobj" action="userController.do?savestyle" name="formobj"
+			method="post">
+			<table style="width: 550px" cellpadding="0" cellspacing="1"
+				class="formtable">
+				<tr>
+					<td>风格</td>
+				</tr>
+				<tr>
+					<td class="value"><input type="radio" value="default"
+						name="indexStyle" /> <span>经典风格</span></td>
+				</tr>
+				<!--
         <tr>
             <td class="value"><input type="radio" value="bootstrap" name="indexStyle" /> <span>BootStrap风格</span></td>
         </tr>
         -->
-        <tr>
-            <td class="value"><input type="radio" value="shortcut" name="indexStyle" /> <span>ShortCut风格</span></td>
-        </tr>
-        <tr>
-            <td class="value"><input type="radio" value="sliding" name="indexStyle"  /><span>Sliding云桌面</span></td>
-        </tr>
-        <tr>
-            <td class="value"><input type="radio" value="ace" name="indexStyle"  /><span>ACE平面风格</span></td>
-        </tr>
-    </table></form>
-</div>
-<div id="changepassword" style="display:none">
+				<tr>
+					<td class="value"><input type="radio" value="shortcut"
+						name="indexStyle" /> <span>ShortCut风格</span></td>
+				</tr>
+				<tr>
+					<td class="value"><input type="radio" value="sliding"
+						name="indexStyle" /><span>Sliding云桌面</span></td>
+				</tr>
+				<tr>
+					<td class="value"><input type="radio" value="ace"
+						name="indexStyle" /><span>ACE平面风格</span></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div id="changepassword" style="display: none">
 
-    <input id="id" type="hidden" value="${user.id }">
-    <table style="width: 550px" cellpadding="0" cellspacing="1" class="formtable">
-        <tbody>
-        <tr>
-            <td align="right" width="20%"><span class="filedzt">原密码:</span></td>
-            <td class="value"><input id="password" type="password" value="" name="password" class="inputxt" datatype="*" errormsg="请输入原密码" /> <span class="Validform_checktip"> 请输入原密码 </span></td>
-        </tr>
-        <tr>
-            <td align="right"><span class="filedzt">新密码:</span></td>
-            <td class="value"><input  type="password" value="" name="newpassword" class="inputxt" plugin="passwordStrength" datatype="*6-18" errormsg="密码至少6个字符,最多18个字符！" /> <span
-                    class="Validform_checktip"> 密码至少6个字符,最多18个字符！ </span> <span class="passwordStrength" style="display: none;"> <b>密码强度：</b> <span>弱</span><span>中</span><span class="last">强</span> </span></td>
-        </tr>
-        <tr>
-            <td align="right"><span class="filedzt">重复密码:</span></td>
-            <td class="value"><input id="newpassword" type="password" recheck="newpassword" datatype="*6-18" errormsg="两次输入的密码不一致！"> <span class="Validform_checktip"></span></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<!--[if IE]>
+		<input id="id" type="hidden" value="${user.id }">
+		<table style="width: 550px" cellpadding="0" cellspacing="1"
+			class="formtable">
+			<tbody>
+				<tr>
+					<td align="right" width="20%"><span class="filedzt">原密码:</span></td>
+					<td class="value"><input id="password" type="password"
+						value="" name="password" class="inputxt" datatype="*"
+						errormsg="请输入原密码" /> <span class="Validform_checktip">
+							请输入原密码 </span></td>
+				</tr>
+				<tr>
+					<td align="right"><span class="filedzt">新密码:</span></td>
+					<td class="value"><input type="password" value=""
+						name="newpassword" class="inputxt" plugin="passwordStrength"
+						datatype="*6-18" errormsg="密码至少6个字符,最多18个字符！" /> <span
+						class="Validform_checktip"> 密码至少6个字符,最多18个字符！ </span> <span
+						class="passwordStrength" style="display: none;"> <b>密码强度：</b>
+							<span>弱</span><span>中</span><span class="last">强</span>
+					</span></td>
+				</tr>
+				<tr>
+					<td align="right"><span class="filedzt">重复密码:</span></td>
+					<td class="value"><input id="newpassword" type="password"
+						recheck="newpassword" datatype="*6-18" errormsg="两次输入的密码不一致！">
+						<span class="Validform_checktip"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!--[if IE]>
 <script type="text/javascript">
     window.jQuery || document.write("<script src='plug-in/ace/js/jquery1x.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
-<script type="text/javascript">
+	<script type="text/javascript">
 
 
     if('ontouchstart' in document.documentElement) document.write("<script src='plug-in/ace/js/jquery.mobile.custom.js'>"+"<"+"/script>");
@@ -979,40 +993,40 @@ fa fa-times
         alertTipTop("浏览器缓存清除成功!","10%");
     }
 </script>
-<script src="plug-in/ace/js/bootstrap.js"></script>
-<script src="plug-in/ace/js/bootbox.js"></script>
+	<script src="plug-in/ace/js/bootstrap.js"></script>
+	<script src="plug-in/ace/js/bootbox.js"></script>
 
-<%--<script src="plug-in/ace/js/jquery-ui.js"></script>
+	<%--<script src="plug-in/ace/js/jquery-ui.js"></script>
 <script src="plug-in/ace/js/jquery.ui.touch-punch.js"></script>--%>
 
-<script src="plug-in/jquery/jquery.contextmenu.js"></script>
+	<script src="plug-in/jquery/jquery.contextmenu.js"></script>
 
-<script src="plug-in/layer/layer.js"></script>
-<!-- ace scripts -->
-<script src="plug-in/ace/js/ace/elements.scroller.js"></script>
-<script src="plug-in/ace/js/ace/elements.colorpicker.js"></script>
-<script src="plug-in/ace/js/ace/elements.fileinput.js"></script>
-<script src="plug-in/ace/js/ace/elements.typeahead.js"></script>
-<script src="plug-in/ace/js/ace/elements.wysiwyg.js"></script>
-<script src="plug-in/ace/js/ace/elements.spinner.js"></script>
-<script src="plug-in/ace/js/ace/elements.treeview.js"></script>
-<script src="plug-in/ace/js/ace/elements.wizard.js"></script>
-<script src="plug-in/ace/js/ace/elements.aside.js"></script>
-<script src="plug-in/ace/js/ace/ace.js"></script>
-<script src="plug-in/ace/js/ace/ace.ajax-content.js"></script>
-<script src="plug-in/ace/js/ace/ace.touch-drag.js"></script>
-<script src="plug-in/ace/js/ace/ace.sidebar.js"></script>
-<script src="plug-in/ace/js/ace/ace.sidebar-scroll-1.js"></script>
-<script src="plug-in/ace/js/ace/ace.submenu-hover.js"></script>
-<script src="plug-in/ace/js/ace/ace.widget-box.js"></script>
-<script src="plug-in/ace/js/ace/ace.settings.js"></script>
-<script src="plug-in/ace/js/ace/ace.settings-rtl.js"></script>
-<script src="plug-in/ace/js/ace/ace.settings-skin.js"></script>
-<script src="plug-in/ace/js/ace/ace.widget-on-reload.js"></script>
-<script src="plug-in/ace/js/ace/ace.searchbox-autocomplete.js"></script>
-<t:base type="tools"></t:base>
-<script src="plug-in/jquery-plugs/storage/jquery.storageapi.min.js"></script>
-<script>jQuery(function($) {
+	<script src="plug-in/layer/layer.js"></script>
+	<!-- ace scripts -->
+	<script src="plug-in/ace/js/ace/elements.scroller.js"></script>
+	<script src="plug-in/ace/js/ace/elements.colorpicker.js"></script>
+	<script src="plug-in/ace/js/ace/elements.fileinput.js"></script>
+	<script src="plug-in/ace/js/ace/elements.typeahead.js"></script>
+	<script src="plug-in/ace/js/ace/elements.wysiwyg.js"></script>
+	<script src="plug-in/ace/js/ace/elements.spinner.js"></script>
+	<script src="plug-in/ace/js/ace/elements.treeview.js"></script>
+	<script src="plug-in/ace/js/ace/elements.wizard.js"></script>
+	<script src="plug-in/ace/js/ace/elements.aside.js"></script>
+	<script src="plug-in/ace/js/ace/ace.js"></script>
+	<script src="plug-in/ace/js/ace/ace.ajax-content.js"></script>
+	<script src="plug-in/ace/js/ace/ace.touch-drag.js"></script>
+	<script src="plug-in/ace/js/ace/ace.sidebar.js"></script>
+	<script src="plug-in/ace/js/ace/ace.sidebar-scroll-1.js"></script>
+	<script src="plug-in/ace/js/ace/ace.submenu-hover.js"></script>
+	<script src="plug-in/ace/js/ace/ace.widget-box.js"></script>
+	<script src="plug-in/ace/js/ace/ace.settings.js"></script>
+	<script src="plug-in/ace/js/ace/ace.settings-rtl.js"></script>
+	<script src="plug-in/ace/js/ace/ace.settings-skin.js"></script>
+	<script src="plug-in/ace/js/ace/ace.widget-on-reload.js"></script>
+	<script src="plug-in/ace/js/ace/ace.searchbox-autocomplete.js"></script>
+	<t:base type="tools"></t:base>
+	<script src="plug-in/jquery-plugs/storage/jquery.storageapi.min.js"></script>
+	<script>jQuery(function($) {
     $.ajax({
         url: "loginController.do?primaryMenuDiy",
         async:false,

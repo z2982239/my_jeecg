@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <t:base type="jquery,easyui,tools,autocomplete"></t:base>
 <!--add-start--Author:luobaoli  Date:20150607 for：增加表单树型列表-->
@@ -25,60 +26,107 @@
 </script>
 <!--add-end--Author:luobaoli  Date:20150607 for：增加表单树型列表-->
 <div class="easyui-layout" fit="true">
-<!--update-start--Author:luobaoli  Date:20150609 for：panel调整为默认关闭-->
-<div region="west" style="width: 150px;" title="表单分类" split="true" collapsed="true">
-<!--update-end--Author:luobaoli  Date:20150609 for：panel调整为默认关闭-->
-<div class="easyui-panel" style="padding:0px;border:0px" fit="true" border="false">
-<ul id="formtree">
-</ul>
-</div>
-</div>
-<div region="center" style="padding:0px;border:0px">
-<t:datagrid queryBuilder="true" sortName="createDate" sortOrder="desc" name="tablePropertyList" title="smart.form.config"
-            fitColumns="false" actionUrl="cgFormHeadController.do?datagrid" idField="id" fit="true" 
-            queryMode="group" checkbox="true" >
-	<t:dgCol title="common.id" field="id" hidden="true"></t:dgCol>
-	<t:dgCol title="hasPeizhi" field="hasPeizhi" hidden="true"></t:dgCol>
-	
-	<t:dgCol title="table.type" field="jformType" replace="single.table_1,master.table_2,slave.table_3" query="true"></t:dgCol>
-	<t:dgCol title="table.name" field="tableName" query="true" autocomplete="true" />
-	<!--add-start--Author:luobaoli  Date:20150607 for：增加表单分类展现-->
-	<t:dgCol title="form.category" field="jformCategory" dictionary="bdfl"></t:dgCol>
-	<!--add-end--Author:luobaoli  Date:20150607 for：增加表单分类展现-->
-	<t:dgCol title="table.description" field="content"></t:dgCol>
-	<t:dgCol title="common.version" field="jformVersion"></t:dgCol>
-	<t:dgCol title="is.tree" field="isTree" hidden="true" replace="common.yes_Y,common.no_N"></t:dgCol>
-	<t:dgCol title="is.page" field="isPagination" hidden="true" replace="common.yes_Y,common.no_N"></t:dgCol>
-	<t:dgCol title="sync.db" field="isDbSynch" replace="has.sync_Y,have.nosync_N" style="background:red;_N" query="true"></t:dgCol>
-	<t:dgCol title="show.checkbox" field="isCheckbox" hidden="true" replace="common.yes_Y,common.no_N"></t:dgCol>
-	<t:dgCol title="common.query.module" field="querymode" hidden="true"></t:dgCol>
-	<t:dgCol title="common.createby" field="createBy" hidden="true"></t:dgCol>
-	<t:dgCol title="common.createtime" field="createDate" formatter="yyyy/MM/dd" hidden="true"></t:dgCol>
-	<t:dgCol title="common.updateby" field="updateBy" hidden="true"></t:dgCol>
-	<t:dgCol title="common.updatetime" field="updateDate" formatter="yyyy/MM/dd" hidden="true"></t:dgCol>
-	<t:dgCol title="common.operation" field="opt"></t:dgCol>
-	<t:dgFunOpt funname="delCgForm(id,tableName)" title="common.delete" urlclass="ace_button" urlStyle="background-color:#ec4758;" urlfont="fa-trash-o"></t:dgFunOpt>
-	<t:dgFunOpt funname="remCgForm(id)" title="common.remove" urlclass="ace_button" urlStyle="background-color:#FFA500;" urlfont="fa-remove"></t:dgFunOpt>
-	<%-- 
+	<!--update-start--Author:luobaoli  Date:20150609 for：panel调整为默认关闭-->
+	<div region="west" style="width: 150px;" title="表单分类" split="true"
+		collapsed="true">
+		<!--update-end--Author:luobaoli  Date:20150609 for：panel调整为默认关闭-->
+		<div class="easyui-panel" style="padding: 0px; border: 0px" fit="true"
+			border="false">
+			<ul id="formtree">
+			</ul>
+		</div>
+	</div>
+	<div region="center" style="padding: 0px; border: 0px">
+		<t:datagrid queryBuilder="true" sortName="createDate" sortOrder="desc"
+			name="tablePropertyList" title="smart.form.config" fitColumns="false"
+			actionUrl="cgFormHeadController.do?datagrid" idField="id" fit="true"
+			queryMode="group" checkbox="true">
+			<t:dgCol title="common.id" field="id" hidden="true"></t:dgCol>
+			<t:dgCol title="hasPeizhi" field="hasPeizhi" hidden="true"></t:dgCol>
+
+			<t:dgCol title="table.type" field="jformType"
+				replace="single.table_1,master.table_2,slave.table_3" query="true"></t:dgCol>
+			<t:dgCol title="table.name" field="tableName" query="true"
+				autocomplete="true" />
+			<!--add-start--Author:luobaoli  Date:20150607 for：增加表单分类展现-->
+			<t:dgCol title="form.category" field="jformCategory"
+				dictionary="bdfl"></t:dgCol>
+			<!--add-end--Author:luobaoli  Date:20150607 for：增加表单分类展现-->
+			<t:dgCol title="table.description" field="content"></t:dgCol>
+			<t:dgCol title="common.version" field="jformVersion"></t:dgCol>
+			<t:dgCol title="is.tree" field="isTree" hidden="true"
+				replace="common.yes_Y,common.no_N"></t:dgCol>
+			<t:dgCol title="is.page" field="isPagination" hidden="true"
+				replace="common.yes_Y,common.no_N"></t:dgCol>
+			<t:dgCol title="sync.db" field="isDbSynch"
+				replace="has.sync_Y,have.nosync_N" style="background:red;_N"
+				query="true"></t:dgCol>
+			<t:dgCol title="show.checkbox" field="isCheckbox" hidden="true"
+				replace="common.yes_Y,common.no_N"></t:dgCol>
+			<t:dgCol title="common.query.module" field="querymode" hidden="true"></t:dgCol>
+			<t:dgCol title="common.createby" field="createBy" hidden="true"></t:dgCol>
+			<t:dgCol title="common.createtime" field="createDate"
+				formatter="yyyy/MM/dd" hidden="true"></t:dgCol>
+			<t:dgCol title="common.updateby" field="updateBy" hidden="true"></t:dgCol>
+			<t:dgCol title="common.updatetime" field="updateDate"
+				formatter="yyyy/MM/dd" hidden="true"></t:dgCol>
+			<t:dgCol title="common.operation" field="opt"></t:dgCol>
+			<t:dgFunOpt funname="delCgForm(id,tableName)" title="common.delete"
+				urlclass="ace_button" urlStyle="background-color:#ec4758;"
+				urlfont="fa-trash-o"></t:dgFunOpt>
+			<t:dgFunOpt funname="remCgForm(id)" title="common.remove"
+				urlclass="ace_button" urlStyle="background-color:#FFA500;"
+				urlfont="fa-remove"></t:dgFunOpt>
+			<%-- 
 	<t:dgFunOpt funname="importFields(id,content)" title="导入字段" urlclass="ace_button"  urlfont="fa-download"></t:dgFunOpt>
 	--%>
-	<t:dgFunOpt exp="isDbSynch#eq#N" title="sync.db" funname="doDbsynch(id,content)" urlclass="ace_button"  urlfont="fa-database"/>
-	<t:dgFunOpt exp="isDbSynch#eq#Y&&jformType#ne#3" funname="addbytab(id,content)" title="form.template" urlclass="ace_button" urlStyle="background-color:#5F9EA0" urlfont="fa-cog"></t:dgFunOpt>
-	<t:dgFunOpt exp="isDbSynch#eq#Y&&jformType#ne#3" funname="addlisttab(tableName,content)" title="function.test" urlStyle="background-color:#18a689;" urlclass="ace_button"  urlfont="fa-gavel"></t:dgFunOpt>
-	<t:dgFunOpt exp="isDbSynch#eq#Y&&jformType#ne#3" funname="popMenuLink(tableName,content)" title="config.place" urlStyle="background-color:#1a7bb9;" urlclass="ace_button"  urlfont="fa-cog" ></t:dgFunOpt>
-	<t:dgFunOpt funname="copyOnline(id)" title="复制表单" operationCode="copyOnlineTable"  urlclass="ace_button"  urlfont="fa-copy"></t:dgFunOpt>
-	<t:dgFunOpt exp="hasPeizhi#ne#0" funname="propertyTable(id)" title="配置表"  urlclass="ace_button"  urlfont="fa-cog"></t:dgFunOpt>
-	<t:dgToolBar title="create.form" icon="icon-add" width="1200" height="600" url="cgFormHeadController.do?addorupdate" funname="addForm"></t:dgToolBar>
-	<t:dgToolBar title="edit.form" icon="icon-edit" width="1200" height="600" url="cgFormHeadController.do?addorupdate" funname="updateForm"></t:dgToolBar>
-	<t:dgToolBar title="custom.button" icon="icon-edit" url="cgformButtonController.do?cgformButton" funname="cgFormButton"></t:dgToolBar>
-	<t:dgToolBar title="js.enhance" icon="icon-edit" url="cgformEnhanceJsController.do?addorupdate" funname="enhanceJs"></t:dgToolBar>
-	<t:dgToolBar title="sql.enhance" icon="icon-edit" url="cgformButtonSqlController.do?addorupdate" operationCode="sql_enhance" funname="cgFormButtonSql"></t:dgToolBar>
-	<t:dgToolBar title="java.enhance" icon="icon-edit" url="cgformEnhanceJavaController.do?addorupdate" funname="javaEnhance"></t:dgToolBar>
-	<t:dgToolBar title="form.export" icon="icon-putout" url="cgformSqlController.do?doMigrateOut" funname="doMigrateOut"></t:dgToolBar>
-	<t:dgToolBar title="form.import" icon="icon-put" url="cgformSqlController.do?inSqlFile" funname="toCgformMigrate"></t:dgToolBar>
-	<t:dgToolBar title="code.generate" icon="icon-add" url="generateController.do?gogenerate" funname="generate"></t:dgToolBar>
-	<t:dgToolBar title="form.generate" icon="icon-add" url="cgformTransController.do?trans" operationCode="db_generate_form" funname="addToData"></t:dgToolBar>
-</t:datagrid></div>
+			<t:dgFunOpt exp="isDbSynch#eq#N" title="sync.db"
+				funname="doDbsynch(id,content)" urlclass="ace_button"
+				urlfont="fa-database" />
+			<t:dgFunOpt exp="isDbSynch#eq#Y&&jformType#ne#3"
+				funname="addbytab(id,content)" title="form.template"
+				urlclass="ace_button" urlStyle="background-color:#5F9EA0"
+				urlfont="fa-cog"></t:dgFunOpt>
+			<t:dgFunOpt exp="isDbSynch#eq#Y&&jformType#ne#3"
+				funname="addlisttab(tableName,content)" title="function.test"
+				urlStyle="background-color:#18a689;" urlclass="ace_button"
+				urlfont="fa-gavel"></t:dgFunOpt>
+			<t:dgFunOpt exp="isDbSynch#eq#Y&&jformType#ne#3"
+				funname="popMenuLink(tableName,content)" title="config.place"
+				urlStyle="background-color:#1a7bb9;" urlclass="ace_button"
+				urlfont="fa-cog"></t:dgFunOpt>
+			<t:dgFunOpt funname="copyOnline(id)" title="复制表单"
+				operationCode="copyOnlineTable" urlclass="ace_button"
+				urlfont="fa-copy"></t:dgFunOpt>
+			<t:dgFunOpt exp="hasPeizhi#ne#0" funname="propertyTable(id)"
+				title="配置表" urlclass="ace_button" urlfont="fa-cog"></t:dgFunOpt>
+			<t:dgToolBar title="create.form" icon="icon-add" width="1200"
+				height="600" url="cgFormHeadController.do?addorupdate"
+				funname="addForm"></t:dgToolBar>
+			<t:dgToolBar title="edit.form" icon="icon-edit" width="1200"
+				height="600" url="cgFormHeadController.do?addorupdate"
+				funname="updateForm"></t:dgToolBar>
+			<t:dgToolBar title="custom.button" icon="icon-edit"
+				url="cgformButtonController.do?cgformButton" funname="cgFormButton"></t:dgToolBar>
+			<t:dgToolBar title="js.enhance" icon="icon-edit"
+				url="cgformEnhanceJsController.do?addorupdate" funname="enhanceJs"></t:dgToolBar>
+			<t:dgToolBar title="sql.enhance" icon="icon-edit"
+				url="cgformButtonSqlController.do?addorupdate"
+				operationCode="sql_enhance" funname="cgFormButtonSql"></t:dgToolBar>
+			<t:dgToolBar title="java.enhance" icon="icon-edit"
+				url="cgformEnhanceJavaController.do?addorupdate"
+				funname="javaEnhance"></t:dgToolBar>
+			<t:dgToolBar title="form.export" icon="icon-putout"
+				url="cgformSqlController.do?doMigrateOut" funname="doMigrateOut"></t:dgToolBar>
+			<t:dgToolBar title="form.import" icon="icon-put"
+				url="cgformSqlController.do?inSqlFile" funname="toCgformMigrate"></t:dgToolBar>
+			<t:dgToolBar title="code.generate" icon="icon-add"
+				url="generateController.do?gogenerate" funname="generate"></t:dgToolBar>
+			<t:dgToolBar title="form.generate" icon="icon-add"
+				url="cgformTransController.do?trans"
+				operationCode="db_generate_form" funname="addToData"></t:dgToolBar>
+		</t:datagrid>
+	</div>
 </div>
 
 <script type="text/javascript">

@@ -64,15 +64,17 @@
 		</property>
 	</bean>
 
-    <!-- Bean解析器,级别高于默认解析器,寻找bean对象进行二次处理 -->
-    <bean id="beanNameViewResolver"
-          class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0">
-    </bean>
-    <!-- Excel 处理 根据用户输入进行对象处理 -->
-    <bean id="jeecgExcelView" class="org.jeecgframework.poi.excel.view.JeecgSingleExcelView" />
-    <bean id="jeecgTemplateExcelView" class="org.jeecgframework.poi.excel.view.JeecgTemplateExcelView" />
-    <bean id="jeecgTemplateWordView" class="org.jeecgframework.poi.excel.view.JeecgTemplateWordView" />
-    <bean id="jeecgMapExcelView" class="org.jeecgframework.poi.excel.view.JeecgMapExcelView" />
+	<!-- Bean解析器,级别高于默认解析器,寻找bean对象进行二次处理 -->
+	<bean id="beanNameViewResolver"
+		class="org.springframework.web.servlet.view.BeanNameViewResolver"
+		p:order="0">
+	</bean>
+	<!-- Excel 处理 根据用户输入进行对象处理 -->
+	<bean id="jeecgExcelView" class="org.jeecgframework.poi.excel.view.JeecgSingleExcelView" />
+	<bean id="jeecgTemplateExcelView"
+		class="org.jeecgframework.poi.excel.view.JeecgTemplateExcelView" />
+	<bean id="jeecgTemplateWordView" class="org.jeecgframework.poi.excel.view.JeecgTemplateWordView" />
+	<bean id="jeecgMapExcelView" class="org.jeecgframework.poi.excel.view.JeecgMapExcelView" />
 	<!-- 方言 -->
 	<bean id="dialect"
 		class="org.jeecgframework.core.common.hibernate.dialect.DialectFactoryBean">
@@ -91,7 +93,7 @@
 			<mvc:mapping path="/api/**" />
 			<bean class="org.jeecgframework.core.interceptors.SignInterceptor" />
 		</mvc:interceptor>
-		<!--add-end-dangzhenghui  20170402 for 添加 api延签拦截器 对签名统处理-->
+		<!--add-end-dangzhenghui 20170402 for 添加 api延签拦截器 对签名统处理 -->
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
 			<bean class="org.jeecgframework.core.interceptors.AuthInterceptor">
@@ -102,7 +104,7 @@
 						<value>loginController.do?login</value>
 						<value>loginController.do?logout</value>
 						<value>loginController.do?changeDefaultOrg</value>
-                        <value>loginController.do?login2</value>
+						<value>loginController.do?login2</value>
 						<value>loginController.do?login3</value>
 						<value>loginController.do?checkuser</value>
 						<value>loginController.do?checkuser=</value>
@@ -110,7 +112,7 @@
 						<value>systemController.do?saveFiles</value>
 						<value>repairController.do?deleteAndRepair</value>
 						<value>userController.do?userOrgSelect</value>
-						<!--移动图表-->
+						<!--移动图表 -->
 						<value>cgDynamGraphController.do?design</value>
 						<value>cgDynamGraphController.do?datagrid</value>
 
@@ -123,7 +125,8 @@
 	</mvc:interceptors>
 
 	<!-- 智能表单配置引入 -->
-	<import resource="classpath*:org/jeecgframework/web/cgform/common/spring-mvc-cgform.xml" />
+	<import
+		resource="classpath*:org/jeecgframework/web/cgform/common/spring-mvc-cgform.xml" />
 	<!-- jeecg plugin dev -->
 	<import resource="classpath:config/spring-config-p3.xml" />
 </beans>

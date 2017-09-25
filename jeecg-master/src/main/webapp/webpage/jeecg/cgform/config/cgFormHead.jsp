@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="org.jeecgframework.web.cgform.common.CgAutoListConstant"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
@@ -8,7 +9,7 @@ String langurl = basePath + "/plug-in/mutiLang/" + lang +".js";
 %>
 <html>
 <head>
-<title><t:mutiLang langKey="smark.form.form.maintain"/></title>
+<title><t:mutiLang langKey="smark.form.form.maintain" /></title>
 <script src=<%=langurl%> type="text/javascript"></script>
 <t:base type="jquery,easyui,jqueryui-sortable,tools"></t:base>
 <script type="text/javascript" src="plug-in/cgform/js/cgformField.js"></script>
@@ -22,7 +23,7 @@ String langurl = basePath + "/plug-in/mutiLang/" + lang +".js";
 	overflow: hidden;
 }
 
-.table-list td,.table-list th {
+.table-list td, .table-list th {
 	text-align: center;
 }
 
@@ -41,30 +42,45 @@ String langurl = basePath + "/plug-in/mutiLang/" + lang +".js";
 </style>
 </head>
 <body style="overflow-y: hidden; overflow-x: hidden;" scroll="no">
-<!-- 增加beforeSubmit页面逻辑删除-->
-<t:formvalid formid="formobj" dialog="true" usePlugin="password" beforeSubmit="deleteUnUsedFiled();" layout="table" tiptype="1" action="cgFormHeadController.do?save">
-	<!-- tiptype="1" -->
-	<input id="id" name="id" type="hidden" value="${cgFormHeadPage.id}">
-	<input id="langurl" name="langurl" type="hidden" value="<%=langurl%>">
-	<!-- add-start--Author:gengjiajia  Date:20160804 for：添加表类型隐藏域-->
-	<input id="tableType" name="tableType" type="hidden" value="${cgFormHeadPage.tableType}">
-	<!-- add-start--Author:gengjiajia  Date:20160804 for：添加表类型隐藏域-->
-	<table cellpadding="0" cellspacing="1" class="formtable">
-		<tr>
-			<td align="right"><label class="Validform_label"> <t:mutiLang langKey="table.name"/>: </label></td>
-			<td class="value">
-			  <input class="inputxt" id="tableName" name="tableName" value="${cgFormHeadPage.tableName}"
-				prefixName="" <c:if test="${not empty cgFormHeadPage.tableName}">readonly="readonly"</c:if> datatype="*" validType="cgform_head,table_Name,id" nullmsg=<t:mutiLang langKey="please.input.table.name"/>> 
-				<span class="Validform_checktip"></span>
-			</td>
-			<td align="right"><label class="Validform_label"> <t:mutiLang langKey="table.description"/>: </label></td>
-			<td class="value"><input class="inputxt" id="content" name="content" value="${cgFormHeadPage.content}" datatype="s2-100"> <span class="Validform_checktip"></span></td>
-		</tr>
-		<tr>
-			<td align="right"><label class="Validform_label"> <t:mutiLang langKey="pk.strategies"/>:</label></td>
-			<td class="value" id="jformPkTypeTd" <c:if test="${cgFormHeadPage.jformPkType ne 'SEQUENCE'}">colspan="3"</c:if>>
-				<select id="jformPkType" name="jformPkType" onchange="jformPkTypeChange();">
-					<option value="UUID" <c:if test="${cgFormHeadPage.jformPkType eq 'UUID'}"> selected='selected'</c:if>><t:mutiLang langKey="common.uuid36bit"/></option>
+	<!-- 增加beforeSubmit页面逻辑删除-->
+	<t:formvalid formid="formobj" dialog="true" usePlugin="password"
+		beforeSubmit="deleteUnUsedFiled();" layout="table" tiptype="1"
+		action="cgFormHeadController.do?save">
+		<!-- tiptype="1" -->
+		<input id="id" name="id" type="hidden" value="${cgFormHeadPage.id}">
+		<input id="langurl" name="langurl" type="hidden" value="<%=langurl%>">
+		<!-- add-start--Author:gengjiajia  Date:20160804 for：添加表类型隐藏域-->
+		<input id="tableType" name="tableType" type="hidden"
+			value="${cgFormHeadPage.tableType}">
+		<!-- add-start--Author:gengjiajia  Date:20160804 for：添加表类型隐藏域-->
+		<table cellpadding="0" cellspacing="1" class="formtable">
+			<tr>
+				<td align="right"><label class="Validform_label"> <t:mutiLang
+							langKey="table.name" />:
+				</label></td>
+				<td class="value"><input class="inputxt" id="tableName"
+					name="tableName" value="${cgFormHeadPage.tableName}" prefixName=""
+					<c:if test="${not empty cgFormHeadPage.tableName}">readonly="readonly"</c:if>
+					datatype="*" validType="cgform_head,table_Name,id"
+					nullmsg=<t:mutiLang langKey="please.input.table.name"/>> <span
+					class="Validform_checktip"></span></td>
+				<td align="right"><label class="Validform_label"> <t:mutiLang
+							langKey="table.description" />:
+				</label></td>
+				<td class="value"><input class="inputxt" id="content"
+					name="content" value="${cgFormHeadPage.content}" datatype="s2-100">
+					<span class="Validform_checktip"></span></td>
+			</tr>
+			<tr>
+				<td align="right"><label class="Validform_label"> <t:mutiLang
+							langKey="pk.strategies" />:
+				</label></td>
+				<td class="value" id="jformPkTypeTd"
+					<c:if test="${cgFormHeadPage.jformPkType ne 'SEQUENCE'}">colspan="3"</c:if>>
+					<select id="jformPkType" name="jformPkType"
+					onchange="jformPkTypeChange();">
+						<option value="UUID"
+							<c:if test="${cgFormHeadPage.jformPkType eq 'UUID'}"> selected='selected'</c:if>><t:mutiLang langKey="common.uuid36bit"/></option>
 					<option value="NATIVE" <c:if test="${cgFormHeadPage.jformPkType eq 'NATIVE'}"> selected='selected'</c:if>><t:mutiLang langKey="common.native.auto.increment"/></option>
 					<option value="SEQUENCE" <c:if test="${cgFormHeadPage.jformPkType eq 'SEQUENCE'}"> selected='selected'</c:if>><t:mutiLang langKey="common.sequence"/></option>
 				</select>

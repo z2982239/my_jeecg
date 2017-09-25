@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -7,22 +8,39 @@
 <t:base type="jquery,easyui,tools,DatePicker"></t:base>
 </head>
 <body style="overflow-y: hidden" scroll="no">
-<t:formvalid formid="formobj" dialog="true" usePlugin="password" layout="table" action="cgformButtonController.do?save">
-	<input id="id" name="id" type="hidden" value="${cgformButtonPage.id }">
-	<input id="formId" name="formId" type="hidden" value="${cgformButtonPage.formId }">
-	<table style="width: 600px;" cellpadding="0" cellspacing="1" class="formtable">
-		<tr>
-			<td align="right"><label class="Validform_label"> <t:mutiLang langKey="common.button.code"/> : </label></td>
-			<td class="value"><input class="inputxt" id="buttonCode" name="buttonCode" ignore="ignore" value="${cgformButtonPage.buttonCode}"> <span class="Validform_checktip"><t:mutiLang langKey="lang.code.cannot.add.update.delete"/></span></td>
-		</tr>
-		<tr>
-			<td align="right"><label class="Validform_label"> <t:mutiLang langKey="common.button.name"/>: </label></td>
-			<td class="value"><input class="inputxt" id="buttonName" name="buttonName" ignore="ignore" value="${cgformButtonPage.buttonName}"> <span class="Validform_checktip"></span></td>
-		</tr>
-		<tr>
-			<td align="right"><label class="Validform_label"> <t:mutiLang langKey="common.button.style"/> </label></td>
-			<td class="value"><select name="buttonStyle" id="buttonStyle">
-				<option value="link" <c:if test="${cgformButtonPage.buttonStyle=='link'}">selected="selected"</c:if>>link</option>
+	<t:formvalid formid="formobj" dialog="true" usePlugin="password"
+		layout="table" action="cgformButtonController.do?save">
+		<input id="id" name="id" type="hidden" value="${cgformButtonPage.id }">
+		<input id="formId" name="formId" type="hidden"
+			value="${cgformButtonPage.formId }">
+		<table style="width: 600px;" cellpadding="0" cellspacing="1"
+			class="formtable">
+			<tr>
+				<td align="right"><label class="Validform_label"> <t:mutiLang
+							langKey="common.button.code" /> :
+				</label></td>
+				<td class="value"><input class="inputxt" id="buttonCode"
+					name="buttonCode" ignore="ignore"
+					value="${cgformButtonPage.buttonCode}"> <span
+					class="Validform_checktip"><t:mutiLang
+							langKey="lang.code.cannot.add.update.delete" /></span></td>
+			</tr>
+			<tr>
+				<td align="right"><label class="Validform_label"> <t:mutiLang
+							langKey="common.button.name" />:
+				</label></td>
+				<td class="value"><input class="inputxt" id="buttonName"
+					name="buttonName" ignore="ignore"
+					value="${cgformButtonPage.buttonName}"> <span
+					class="Validform_checktip"></span></td>
+			</tr>
+			<tr>
+				<td align="right"><label class="Validform_label"> <t:mutiLang
+							langKey="common.button.style" />
+				</label></td>
+				<td class="value"><select name="buttonStyle" id="buttonStyle">
+						<option value="link"
+							<c:if test="${cgformButtonPage.buttonStyle=='link'}">selected="selected"</c:if>>link</option>
 				<option value="button" <c:if test="${cgformButtonPage.buttonStyle=='button'}">selected="selected"</c:if>>button</option>
 			</select> <span class="Validform_checktip"></span></td>
 		</tr>

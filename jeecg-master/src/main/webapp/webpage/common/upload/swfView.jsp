@@ -1,13 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html >
 <html>
 <head>
 <title>附件查看</title>
-<script type="text/javascript" src="plug-in/Flexpaper/flexpaper_flash.js"></script>
+<script type="text/javascript"
+	src="plug-in/Flexpaper/flexpaper_flash.js"></script>
 </head>
 <body>
-<div style="position: absolute; left: 5px; top: 5px;"><a id="viewerPlaceHolder" style="width: 1080px; height: 700px; display: block"></a> <script type="text/javascript">
+	<div style="position: absolute; left: 5px; top: 5px;">
+		<a id="viewerPlaceHolder"
+			style="width: 1080px; height: 700px; display: block"></a>
+		<script type="text/javascript">
 			var fp = new FlexPaperViewer('plug-in/Flexpaper/FlexPaperViewer',
 			'viewerPlaceHolder', {
 				config : {
@@ -33,7 +38,8 @@
 					localeChain : 'zh_CN'
 				}
 			});
-</script></div>
+</script>
+	</div>
 </body>
 </html>
 

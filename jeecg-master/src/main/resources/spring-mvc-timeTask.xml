@@ -16,10 +16,11 @@
 	<context:component-scan base-package="org.jeecgframework.core.timer" />
 	<task:executor id="executor" pool-size="5" />
 	<task:scheduler id="scheduler" pool-size="10" />
-	<task:annotation-driven executor="executor" scheduler="scheduler" />
-		
-	
-	<!-- 定时任务配置   smsSendTask 可配置到管理界面 -->
+	<task:annotation-driven executor="executor"
+		scheduler="scheduler" />
+
+
+	<!-- 定时任务配置 smsSendTask 可配置到管理界面 -->
 	<bean id="smsSendTaskJob"
 		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
 		<property name="targetObject" ref="smsSendTask" />
@@ -37,10 +38,9 @@
 		class="org.jeecgframework.core.timer.DataBaseSchedulerFactoryBean">
 		<property name="triggers">
 			<list>
-				<!--
-				<ref bean="taskDemoServiceTaskCronTrigger" />
-				<ref bean="smsSendTaskCronTrigger" />
-				-->
+				<!-- <ref bean="taskDemoServiceTaskCronTrigger" /> 
+					 <ref bean="smsSendTaskCronTrigger" 
+					/> -->
 			</list>
 		</property>
 	</bean>

@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -7,14 +8,21 @@
 <t:base type="jquery,easyui,tools,DatePicker"></t:base>
 </head>
 <body style="overflow-y: hidden" scroll="no">
-<t:formvalid formid="formobj" dialog="true" usePlugin="password" layout="table" action="cgformButtonSqlController.do?save">
-	<input id="id" name="id" type="hidden" value="${cgformButtonSqlPage.id }">
-	<input id="formId" name="formId" type="hidden" value="${cgformButtonSqlPage.formId }">
-	<table cellpadding="0" cellspacing="1" class="formtable">
-		<tr>
-			<td align="right"><label class="Validform_label"> <t:mutiLang langKey="operate.code"/>: </label></td>
-			<td class="value"><select id="buttonCode" name="buttonCode" datatype="*">
-				<option value="add" <c:if test="${cgformButtonSqlPage.buttonCode=='add'}">selected="selected"</c:if>>add</option>
+	<t:formvalid formid="formobj" dialog="true" usePlugin="password"
+		layout="table" action="cgformButtonSqlController.do?save">
+		<input id="id" name="id" type="hidden"
+			value="${cgformButtonSqlPage.id }">
+		<input id="formId" name="formId" type="hidden"
+			value="${cgformButtonSqlPage.formId }">
+		<table cellpadding="0" cellspacing="1" class="formtable">
+			<tr>
+				<td align="right"><label class="Validform_label"> <t:mutiLang
+							langKey="operate.code" />:
+				</label></td>
+				<td class="value"><select id="buttonCode" name="buttonCode"
+					datatype="*">
+						<option value="add"
+							<c:if test="${cgformButtonSqlPage.buttonCode=='add'}">selected="selected"</c:if>>add</option>
 				<option value="update" <c:if test="${cgformButtonSqlPage.buttonCode=='update'}">selected="selected"</c:if>>update</option>
 				<option value="delete" <c:if test="${cgformButtonSqlPage.buttonCode=='delete'}">selected="selected"</c:if>>delete</option>
 				<c:forEach items="${buttonList}" var="button">

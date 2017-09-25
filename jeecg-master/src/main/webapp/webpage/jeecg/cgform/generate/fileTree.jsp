@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="org.jeecgframework.web.cgform.common.CgAutoListConstant"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
@@ -31,6 +32,6 @@ function fillPath(id){
 </style>
 </head>
 <div id="fileTreeDiv">
-<ul id="fileTree">
-</ul>
+	<ul id="fileTree">
+	</ul>
 </div>

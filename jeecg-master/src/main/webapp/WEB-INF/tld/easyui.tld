@@ -7,27 +7,27 @@
 	<short-name>t</short-name>
 	<uri>/easyui-tags</uri>
 	<display-name>"自定义标签"</display-name>
-	
+
 	<tag>
-        <name>mutiLang</name>
-        <tag-class>org.jeecgframework.tag.core.easyui.MutiLangTag</tag-class>
-        <body-content>JSP</body-content>
-        <description>多语言输出</description>
-        <attribute>
-            <name>langKey</name>
-            <required>true</required>
-            <rtexprvalue>true</rtexprvalue>
-            <description>控件名称</description>
-        </attribute>
-        
-        <attribute>
-            <name>langArg</name>
-            <required>false</required>
-            <rtexprvalue>true</rtexprvalue>
-            <description>参数</description>
-        </attribute>
-    </tag>
-	
+		<name>mutiLang</name>
+		<tag-class>org.jeecgframework.tag.core.easyui.MutiLangTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>多语言输出</description>
+		<attribute>
+			<name>langKey</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>控件名称</description>
+		</attribute>
+
+		<attribute>
+			<name>langArg</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>参数</description>
+		</attribute>
+	</tag>
+
 	<tag>
 		<name>base</name>
 		<tag-class>org.jeecgframework.tag.core.easyui.BaseTag</tag-class>
@@ -221,7 +221,7 @@
 			<rtexprvalue>true</rtexprvalue>
 			<description>字段标题</description>
 		</attribute>
-		
+
 		<attribute>
 			<name>langArg</name>
 			<required>false</required>
@@ -367,21 +367,21 @@
 			<description>datagrid field 的扩展字段,如果easyui上面有但是jeecg没有这个属性可以自己添加
 				添加规则和easyui的field一致</description>
 		</attribute>
-  		<attribute>
-   			<name>popup</name>
-   			<rtexprvalue>true</rtexprvalue>
-   			<description>是否启用popup模式</description>
-  		</attribute>
-  		<attribute>
-   			<name>editor</name>
-   			<rtexprvalue>true</rtexprvalue>
-   			<description>高级查询器用的字段编辑器</description>
-  		</attribute>
-  		<attribute>
-   			<name>defaultVal</name>
-   			<rtexprvalue>true</rtexprvalue>
-   			<description>UI标签库列表默认查询条件</description>
-  		</attribute>
+		<attribute>
+			<name>popup</name>
+			<rtexprvalue>true</rtexprvalue>
+			<description>是否启用popup模式</description>
+		</attribute>
+		<attribute>
+			<name>editor</name>
+			<rtexprvalue>true</rtexprvalue>
+			<description>高级查询器用的字段编辑器</description>
+		</attribute>
+		<attribute>
+			<name>defaultVal</name>
+			<rtexprvalue>true</rtexprvalue>
+			<description>UI标签库列表默认查询条件</description>
+		</attribute>
 	</tag>
 	<tag>
 		<name>dgDelOpt</name>
@@ -400,7 +400,7 @@
 			<rtexprvalue>true</rtexprvalue>
 			<description>操作标题</description>
 		</attribute>
-		
+
 		<attribute>
 			<name>langArg</name>
 			<required>false</required>
@@ -432,7 +432,8 @@
 		<attribute>
 			<name>urlStyle</name>
 			<rtexprvalue>true</rtexprvalue>
-			<description>链接样式,直接写style里的内容; e.g: (background-color:#18a689;padding-left:10px;)</description>
+			<description>链接样式,直接写style里的内容; e.g:
+				(background-color:#18a689;padding-left:10px;)</description>
 		</attribute>
 		<attribute>
 			<name>urlclass</name>
@@ -476,7 +477,8 @@
 		<attribute>
 			<name>urlStyle</name>
 			<rtexprvalue>true</rtexprvalue>
-			<description>链接样式,直接写style里的内容; e.g: (background-color:#18a689;padding-left:10px;)</description>
+			<description>链接样式,直接写style里的内容; e.g:
+				(background-color:#18a689;padding-left:10px;)</description>
 		</attribute>
 		<attribute>
 			<name>urlclass</name>
@@ -535,7 +537,8 @@
 		<attribute>
 			<name>urlStyle</name>
 			<rtexprvalue>true</rtexprvalue>
-			<description>链接样式,直接写style里的内容; e.g: (background-color:#18a689;padding-left:10px;)</description>
+			<description>链接样式,直接写style里的内容; e.g:
+				(background-color:#18a689;padding-left:10px;)</description>
 		</attribute>
 		<attribute>
 			<name>urlclass</name>
@@ -559,7 +562,7 @@
 			<rtexprvalue>true</rtexprvalue>
 			<description>操作标题</description>
 		</attribute>
-		
+
 		<attribute>
 			<name>langArg</name>
 			<required>false</required>
@@ -587,7 +590,8 @@
 		<attribute>
 			<name>urlStyle</name>
 			<rtexprvalue>true</rtexprvalue>
-			<description>链接样式,直接写style里的内容; e.g: (background-color:#18a689;padding-left:10px;)</description>
+			<description>链接样式,直接写style里的内容; e.g:
+				(background-color:#18a689;padding-left:10px;)</description>
 		</attribute>
 		<attribute>
 			<name>urlclass</name>
@@ -615,21 +619,21 @@
 			<rtexprvalue>true</rtexprvalue>
 			<description>工具条选项图标</description>
 		</attribute>
-		
+
 		<attribute>
 			<name>title</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>工具条选项标题</description>
 		</attribute>
-		
+
 		<attribute>
 			<name>langArg</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>多语言参数</description>
 		</attribute>
-		
+
 		<attribute>
 			<name>funname</name>
 			<rtexprvalue>true</rtexprvalue>
@@ -693,7 +697,8 @@
 		<attribute>
 			<name>urlStyle</name>
 			<rtexprvalue>true</rtexprvalue>
-			<description>链接样式,直接写style里的内容; e.g: (background-color:#18a689;padding-left:10px;)</description>
+			<description>链接样式,直接写style里的内容; e.g:
+				(background-color:#18a689;padding-left:10px;)</description>
 		</attribute>
 		<attribute>
 			<name>urlclass</name>
@@ -706,58 +711,21 @@
 			<description>自定义按钮图标样式</description>
 		</attribute>
 	</tag>
-	<!-- 
-	<tag>
-		<name>comboBox</name>
-		<tag-class>org.jeecgframework.tag.core.easyui.ComboBoxTag</tag-class>
-		<body-content>JSP</body-content>
-		<description>下拉选择框</description>
-		<attribute>
-			<name>name</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-			<description>控件名称</description>
-		</attribute>
-		<attribute>
-			<name>url</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-			<description>远程数据</description>
-		</attribute>
-		<attribute>
-			<name>id</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-			<description>ID对应字段</description>
-		</attribute>
-		<attribute>
-			<name>text</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-			<description>text对应字段</description>
-		</attribute>
-		<attribute>
-			<name>width</name>
-			<rtexprvalue>true</rtexprvalue>
-			<description>width对应字段</description>
-		</attribute>
-		<attribute>
-			<name>listWidth</name>
-			<rtexprvalue>true</rtexprvalue>
-			<description>listWidth对应字段</description>
-		</attribute>
-		<attribute>
-			<name>listHeight</name>
-			<rtexprvalue>true</rtexprvalue>
-			<description>listHeight对应字段</description>
-		</attribute>
-        <attribute>
-            <name>editable</name>
-            <rtexprvalue>true</rtexprvalue>
-            <description>是否可编辑</description>
-        </attribute>
-	</tag>
-	 -->
+	<!-- <tag> <name>comboBox</name> <tag-class>org.jeecgframework.tag.core.easyui.ComboBoxTag</tag-class> 
+		<body-content>JSP</body-content> <description>下拉选择框</description> <attribute> 
+		<name>name</name> <required>true</required> <rtexprvalue>true</rtexprvalue> 
+		<description>控件名称</description> </attribute> <attribute> <name>url</name> 
+		<required>true</required> <rtexprvalue>true</rtexprvalue> <description>远程数据</description> 
+		</attribute> <attribute> <name>id</name> <required>true</required> <rtexprvalue>true</rtexprvalue> 
+		<description>ID对应字段</description> </attribute> <attribute> <name>text</name> 
+		<required>true</required> <rtexprvalue>true</rtexprvalue> <description>text对应字段</description> 
+		</attribute> <attribute> <name>width</name> <rtexprvalue>true</rtexprvalue> 
+		<description>width对应字段</description> </attribute> <attribute> <name>listWidth</name> 
+		<rtexprvalue>true</rtexprvalue> <description>listWidth对应字段</description> 
+		</attribute> <attribute> <name>listHeight</name> <rtexprvalue>true</rtexprvalue> 
+		<description>listHeight对应字段</description> </attribute> <attribute> <name>editable</name> 
+		<rtexprvalue>true</rtexprvalue> <description>是否可编辑</description> </attribute> 
+		</tag> -->
 	<tag>
 		<name>comboTree</name>
 		<tag-class>org.jeecgframework.tag.core.easyui.ComboTreeTag</tag-class>
@@ -1199,16 +1167,9 @@
 			<description>是否传入初始化值</description>
 		</attribute>
 	</tag>
-	<!-- 颜色控件
-	<tag>
-		<name>colorchange</name>
-		<tag-class>org.jeecgframework.tag.core.easyui.ColorChangeTag</tag-class>
-		<body-content>JSP</body-content>
-		<display-name>改变HTML控件颜色</display-name>
-		<small-icon>111</small-icon>
-		<description>改变HTML控件颜色</description>
-	</tag>
-	 -->
+	<!-- 颜色控件 <tag> <name>colorchange</name> <tag-class>org.jeecgframework.tag.core.easyui.ColorChangeTag</tag-class> 
+		<body-content>JSP</body-content> <display-name>改变HTML控件颜色</display-name> 
+		<small-icon>111</small-icon> <description>改变HTML控件颜色</description> </tag> -->
 	<!-- 菜单生成控件 -->
 	<tag>
 		<name>menu</name>
@@ -1273,14 +1234,14 @@
 			<rtexprvalue>true</rtexprvalue>
 			<description>提示触发文字长度</description>
 		</attribute>
-		
+
 		<attribute>
 			<name>dataSource</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>数据源请求通用URL</description>
 		</attribute>
-		
+
 		<attribute>
 			<name>defValue</name>
 			<required>false</required>
@@ -1425,7 +1386,7 @@
 			<rtexprvalue>true</rtexprvalue>
 			<description>是否可编辑-默认是可以编辑</description>
 		</attribute>
-		
+
 	</tag>
 	<tag>
 		<name>authFilter</name>
@@ -1518,7 +1479,7 @@
 			<description>是否显示Label</description>
 		</attribute>
 	</tag>
-<!-- add-begin-Author:xuelin  Date:20170407 for：[#1814]【标签】弹出组织机构选择，目前页面是ztree的，太简单了，应该做成树列表-  -->	
+	<!-- add-begin-Author:xuelin Date:20170407 for：[#1814]【标签】弹出组织机构选择，目前页面是ztree的，太简单了，应该做成树列表- -->
 	<tag>
 		<name>orgSelect</name>
 		<tag-class>org.jeecgframework.tag.core.easyui.OrgSelectTag</tag-class>
@@ -1585,7 +1546,7 @@
 			<description>是否显示Label</description>
 		</attribute>
 	</tag>
-<!-- add-end-Author:xuelin  Date:20170407 for：[#1814]【标签】弹出组织机构选择，目前页面是ztree的，太简单了，应该做成树列表- -->		
+	<!-- add-end-Author:xuelin Date:20170407 for：[#1814]【标签】弹出组织机构选择，目前页面是ztree的，太简单了，应该做成树列表- -->
 	<tag>
 		<name>userSelect</name>
 		<tag-class>org.jeecgframework.tag.core.easyui.UserSelectTag</tag-class>
@@ -1603,7 +1564,7 @@
 			<name>selectedNamesInputId</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>用于显示已选择用户的用户名  input的id</description>
+			<description>用于显示已选择用户的用户名 input的id</description>
 		</attribute>
 		<attribute>
 			<name>selectedIdsInputId</name>
@@ -1684,7 +1645,7 @@
 			<description>窗口高度</description>
 		</attribute>
 	</tag>
-	<!-- add-begin- Author:taoyan  Date:20170327 for：文件上传标签  -->
+	<!-- add-begin- Author:taoyan Date:20170327 for：文件上传标签 -->
 	<tag>
 		<name>webUploader</name>
 		<tag-class>org.jeecgframework.tag.core.easyui.WebUploaderTag</tag-class>
@@ -1756,7 +1717,7 @@
 			<rtexprvalue>true</rtexprvalue>
 			<description>显示图片的div,如果不给会默认在按钮下方添加div其id为tempdiv</description>
 		</attribute>
-		
+
 		<attribute>
 			<name>duplicate</name>
 			<required>false</required>
@@ -1781,6 +1742,6 @@
 			<description>文件处理action</description>
 		</attribute>
 	</tag>
-	<!-- add-end- Author:taoyan  Date:20170327 for：文件上传标签  -->
-	
+	<!-- add-end- Author:taoyan Date:20170327 for：文件上传标签 -->
+
 </taglib>

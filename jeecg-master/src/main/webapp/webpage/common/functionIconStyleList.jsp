@@ -2,11 +2,11 @@
 update---Author:chenj  Date:20160729 for：增加图标样式预览页面
  --%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
- <%@ page import = "java.io.*" %>
- <%@ page import = "java.util.ArrayList,java.util.List" %>
- <%@include file="/context/mytags.jsp"%>
- <%
+	pageEncoding="utf-8"%>
+<%@ page import="java.io.*"%>
+<%@ page import="java.util.ArrayList,java.util.List"%>
+<%@include file="/context/mytags.jsp"%>
+<%
  		String param = request.getParameter("style");
  		
  		 List<String> list =new ArrayList<String>();
@@ -80,19 +80,23 @@ update---Author:chenj  Date:20160729 for：增加图标样式预览页面
 <%
 	if(param!=null&&param.equals("ace")){
 %>
-	<link rel="stylesheet" href="<%=basePath %>/plug-in/ace/assets/css/font-awesome.min.css" />
+<link rel="stylesheet"
+	href="<%=basePath %>/plug-in/ace/assets/css/font-awesome.min.css" />
 <%}else if(param!=null&&param.equals("hplus")){ %>
-	<link rel="stylesheet" href="<%=basePath %>/plug-in-ui/hplus/css/font-awesome.min.css?v=4.4.0" />
+<link rel="stylesheet"
+	href="<%=basePath %>/plug-in-ui/hplus/css/font-awesome.min.css?v=4.4.0" />
 <%}else if(param!=null&&param.equals("urlfont")){ %>
-	<link rel="stylesheet" href="<%=basePath %>/plug-in/ace/css/font-awesome.css" />
+<link rel="stylesheet"
+	href="<%=basePath %>/plug-in/ace/css/font-awesome.css" />
 <%} %>
 
 <title>菜单图标样式</title>
 </head>
 <body>
-      <h1><%=param%>图标样式</h1>
-		<table>
-			<%
+	<h1><%=param%>图标样式
+	</h1>
+	<table>
+		<%
 				if(list.size()>0){
 					for(String style:list){
 						String c = style;
@@ -101,11 +105,14 @@ update---Author:chenj  Date:20160729 for：增加图标样式预览页面
 		         		}
 						
 			%>
-					<tr><td><i class=" <%=style%>"></i></td> <td><%=c %></td></tr>
-			<%
+		<tr>
+			<td><i class=" <%=style%>"></i></td>
+			<td><%=c %></td>
+		</tr>
+		<%
 					} 
 				}
 			%>
-		</table>
+	</table>
 </body>
 </html>

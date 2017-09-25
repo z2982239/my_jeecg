@@ -30,7 +30,8 @@
 		<property name="numberFormat" value="0"></property>
 	</bean>
 	<!-- Template Context 自定义word代码生成器 -->
-	<bean id="templetContextWord" class="org.jeecgframework.web.cgform.service.impl.generate.TempletContextWord">
+	<bean id="templetContextWord"
+		class="org.jeecgframework.web.cgform.service.impl.generate.TempletContextWord">
 		<property name="tags">
 			<map>
 				<entry key="DictData" value-ref="dictDataTag" />

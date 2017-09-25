@@ -28,7 +28,7 @@
 		<filter-name>openSessionInViewFilter</filter-name>
 		<url-pattern>*.do</url-pattern>
 	</filter-mapping>
-	<!--使rest风格url对应的controller支持延迟加载-->
+	<!--使rest风格url对应的controller支持延迟加载 -->
 	<filter-mapping>
 		<filter-name>openSessionInViewFilter</filter-name>
 		<url-pattern>/rest/*</url-pattern>
@@ -123,7 +123,7 @@
 		<servlet-name>springMvc</servlet-name>
 		<url-pattern>*.action</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- restUrl风格配置 -->
 	<servlet>
 		<servlet-name>restSpringMvc</servlet-name>
@@ -138,7 +138,7 @@
 		<servlet-name>restSpringMvc</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- druid -->
 	<servlet>
 		<servlet-name>druidStatView</servlet-name>
@@ -148,22 +148,22 @@
 		<servlet-name>druidStatView</servlet-name>
 		<url-pattern>/webpage/system/druid/*</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- 验证码 -->
-    <servlet>
-        <servlet-name>RandCodeImage</servlet-name>
-        <servlet-class>org.jeecgframework.web.system.servlet.RandCodeImageServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>RandCodeImage</servlet-name>
-        <url-pattern>/randCodeImage</url-pattern>
-    </servlet-mapping>
-    
+	<servlet>
+		<servlet-name>RandCodeImage</servlet-name>
+		<servlet-class>org.jeecgframework.web.system.servlet.RandCodeImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RandCodeImage</servlet-name>
+		<url-pattern>/randCodeImage</url-pattern>
+	</servlet-mapping>
+
 	<!-- 404错误页面 -->
-    <error-page>
-        <error-code>404</error-code>
-        <location>/webpage/common/404.htm</location>
-    </error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/webpage/common/404.htm</location>
+	</error-page>
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>

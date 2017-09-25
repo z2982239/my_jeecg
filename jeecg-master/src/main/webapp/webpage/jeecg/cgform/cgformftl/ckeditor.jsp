@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -19,13 +20,17 @@
      }
 	</script>
 </head>
-<form action="cgformFtlControllerr.do?saveCkeditor" method="post" id="myCkeditorForm"><input type="hidden" value="${cgformFtlEntity.id}" name="id" /> <textarea cols="80" id="editor1"
-	name="contents" rows="100">
+<form action="cgformFtlControllerr.do?saveCkeditor" method="post"
+	id="myCkeditorForm">
+	<input type="hidden" value="${cgformFtlEntity.id}" name="id" />
+	<textarea cols="80" id="editor1" name="contents" rows="100">
 			${contents}
-		</textarea> <script>
+		</textarea>
+	<script>
 		CKEDITOR.replace('editor1',{
 			height:350,
 			customConfig:'${pageContext.request.contextPath}/plug-in/ckeditor/ftlConfig.js'
 		});
-		</script></form>
+		</script>
+</form>
 </html>

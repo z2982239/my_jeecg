@@ -5,8 +5,8 @@
 <title>admin密码初始化</title>
 </head>
 <body>
-init pwd....
-<script type="text/javascript">
+	init pwd....
+	<script type="text/javascript">
 		window.setTimeout(function() {
 			window.location.replace('loginController.do?pwdInit');
 		}, 1000);

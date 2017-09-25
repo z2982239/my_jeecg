@@ -10,9 +10,11 @@
 	border-radius: 0 0 20px 20px;
 	border-bottom: 1px solid #000;
 }
+
 .styler-active {
-    border-radius: 0 0 0 20px;
+	border-radius: 0 0 0 20px;
 }
+
 .styler-show {
 	width: 200px;
 	height: 42px;
@@ -21,35 +23,37 @@
 	top: 0;
 	left: 40px;
 	border-radius: 0 0 20px 0;
-    display: none;
-    border-bottom: 1px solid #000;
+	display: none;
+	border-bottom: 1px solid #000;
 }
+
 .styler-show li {
-    padding: 12px 0 0 12px;
-    display: inline-block;
+	padding: 12px 0 0 12px;
+	display: inline-block;
 }
+
 .styler-show li div {
 	border-radius: 2px;
 	box-shadow: inset 0px 0px 1px 0px #000;
 }
+
 #colorSelector-top-bar {
 	width: 20px;
 	height: 20px;
 	background: #292929;
 }
+
 #colorSelector-box-head {
 	width: 20px;
 	height: 20px;
 	background: #292929;
 }
 /* For screens smaller than 1280px */
-
-@media only screen and (min-width: 600px) and (max-width: 1249px){
-
-    .styler {
-    	position: absolute;
-    	left: -100px !important;
-    }
+@media only screen and (min-width: 600px) and (max-width: 1249px) {
+	.styler {
+		position: absolute;
+		left: -100px !important;
+	}
 	.header {
 		position: absolute;
 		top: 0;

@@ -1,54 +1,50 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
 <html>
- <head>
-  <title>Online表单风格</title>
-  <t:base type="jquery,easyui,tools,DatePicker"></t:base>
- </head>
- <body>
-  <t:formvalid formid="formobj" dialog="true" usePlugin="password" layout="table" action="cgformTemplateController.do?doUpdate">
-	  <input id="id" name="id" type="hidden" value="${cgformTemplatePage.id }">
-	  <div style="float: left;height: 99%;width: 30%;margin-top: 20px">
-		  <img id="prePic" src="" alt="预览图" width="99%" height="200px" />
-<!-- 		  <a class="easyui-linkbutton" href="javascript:void(0)" onclick="uploadPic()">上传</a> -->
-	  </div>
-	  <div style="float: right;height: 99%;width:70%">
-		  <table style="width: 100%;height: 100%" cellpadding="0" cellspacing="1" class="formtable">
+<head>
+<title>Online表单风格</title>
+<t:base type="jquery,easyui,tools,DatePicker"></t:base>
+</head>
+<body>
+	<t:formvalid formid="formobj" dialog="true" usePlugin="password"
+		layout="table" action="cgformTemplateController.do?doUpdate">
+		<input id="id" name="id" type="hidden"
+			value="${cgformTemplatePage.id }">
+		<div style="float: left; height: 99%; width: 30%; margin-top: 20px">
+			<img id="prePic" src="" alt="预览图" width="99%" height="200px" />
+			<!-- 		  <a class="easyui-linkbutton" href="javascript:void(0)" onclick="uploadPic()">上传</a> -->
+		</div>
+		<div style="float: right; height: 99%; width: 70%">
+			<table style="width: 100%; height: 100%" cellpadding="0"
+				cellspacing="1" class="formtable">
 
-			  <tr>
-				  <td align="right">
-					  <label class="Validform_label">
-						  表单风格编码:
-					  </label>
-				  </td>
-				  <td class="value">
-					  <input disabled id="templateCode" name="templateCode" type="text" style="width: 300px" class="inputxt" datatype="/\w{1,20}/i" errormsg="编码只能为字母！" value='${cgformTemplatePage.templateCode}'>
-					  <span class="Validform_checktip"></span>
-					  <label class="Validform_label" style="display: none;">表单风格编码</label>
-				  </td>
-			  </tr>
-			  <tr>
-				  <td align="right">
-					  <label class="Validform_label" style="width: 100px">
-						  表单风格名称:
-					  </label>
-				  </td>
-				  <td class="value">
-					  <input id="templateName" name="templateName" type="text" style="width: 300px" class="inputxt" datatype="*" value='${cgformTemplatePage.templateName}' />
-					  <span class="Validform_checktip"></span>
-					  <label class="Validform_label" style="display: none;">表单风格名称</label>
-				  </td>
-			  </tr>
-			  <tr>
-				  <td align="right" >
-					  <label class="Validform_label">
-						  类型:
-					  </label>
-				  </td>
-				  <td class="value"  >
-					  <select id="templateType" name="templateType" >
-						  <option value="1" <c:if test="${cgformTemplatePage.templateType eq '1'}"> selected='selected'</c:if>>单表</option>
+				<tr>
+					<td align="right"><label class="Validform_label">
+							表单风格编码: </label></td>
+					<td class="value"><input disabled id="templateCode"
+						name="templateCode" type="text" style="width: 300px"
+						class="inputxt" datatype="/\w{1,20}/i" errormsg="编码只能为字母！"
+						value='${cgformTemplatePage.templateCode}'> <span
+						class="Validform_checktip"></span> <label class="Validform_label"
+						style="display: none;">表单风格编码</label></td>
+				</tr>
+				<tr>
+					<td align="right"><label class="Validform_label"
+						style="width: 100px"> 表单风格名称: </label></td>
+					<td class="value"><input id="templateName" name="templateName"
+						type="text" style="width: 300px" class="inputxt" datatype="*"
+						value='${cgformTemplatePage.templateName}' /> <span
+						class="Validform_checktip"></span> <label class="Validform_label"
+						style="display: none;">表单风格名称</label></td>
+				</tr>
+				<tr>
+					<td align="right"><label class="Validform_label"> 类型:
+					</label></td>
+					<td class="value"><select id="templateType"
+						name="templateType">
+							<option value="1"<c:if test="${cgformTemplatePage.templateType eq '1'}"> selected='selected'</c:if>>单表</option>
 						  <option value="2" <c:if test="${cgformTemplatePage.templateType eq '2'}"> selected="selected"</c:if>>主子表</option>
 						  <option value="3" <c:if test="${cgformTemplatePage.templateType eq '3'}"> selected="selected"</c:if>>通用模板</option>
 					  </select>

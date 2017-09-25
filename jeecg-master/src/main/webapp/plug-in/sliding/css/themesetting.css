@@ -15,7 +15,7 @@
 	line-height: 22px;
 	padding: 5px 0 0;
 	width: 100%;
-	font-size:12px;
+	font-size: 12px;
 	border: solid #a1b4b0;
 	border-width: 0 0 1px
 }
@@ -33,12 +33,12 @@
 }
 
 .themeSetting_head .current {
-	background: url("../images/tab_background.gif") repeat-x scroll left top	white;
+	background: url("../images/tab_background.gif") repeat-x scroll left top
+		white;
 	border-color: #a1b4b0;
 	border-style: solid;
 	border-width: 1px 1px 0;
 	margin: 0 0 0 5px
-	
 }
 
 .themeSetting_body {
@@ -47,7 +47,7 @@
 	overflow-x: hidden
 }
 
-html.ie6_0 .themeSetting_body,html.ie7_0 .themeSetting_body {
+html.ie6_0 .themeSetting_body, html.ie7_0 .themeSetting_body {
 	position: relative
 }
 
@@ -99,7 +99,7 @@ html.ie6_0 .themeSetting_body,html.ie7_0 .themeSetting_body {
 	vertical-align: middle
 }
 
-.themeSetting_selected2 .body2_label,.themeSetting_selected2 .body2_input
+.themeSetting_selected2 .body2_label, .themeSetting_selected2 .body2_input
 	{
 	font-weight: bold
 }
@@ -156,11 +156,11 @@ html.ie6_0 .themeSetting_wallpaper_tips {
 	margin: 6px 10px 0 0
 }
 
-html.ie6_0 #wallpaperDisplayMode,html.ie7_0 #wallpaperDisplayMode {
+html.ie6_0 #wallpaperDisplayMode, html.ie7_0 #wallpaperDisplayMode {
 	vertical-align: middle
 }
 
-div.wallpaper_settingButton,a.themeSetting_settingButton {
+div.wallpaper_settingButton, a.themeSetting_settingButton {
 	display: inline;
 	float: left;
 	margin: 5px 10px 0;
@@ -181,7 +181,7 @@ div.themeSetting_hover {
 	background: #cbe7fc
 }
 
-div.themeSetting_selected,a.themeSetting_selected {
+div.themeSetting_selected, a.themeSetting_selected {
 	background: #aad8fc
 }
 
@@ -205,9 +205,9 @@ div.wallpaper_settingButton {
 
 html.ie6_0 .themeSetting_wallpaper_del {
 	background: 0;
-	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
+	filter: progid: DXImageTransform.Microsoft.AlphaImageLoader( src= 
 		'http://0.web.qstatic.com/webqqpic/module/themesetting/images/del.png',
-		sizingMethod = 'scale' )
+		sizingMethod= 'scale')
 }
 
 .wallpaper_loading {
@@ -259,8 +259,8 @@ html.ie6_0 .themeSetting_wallpaper_del {
 	position: relative
 }
 
-.themeSetting_wallpaper .upload,.themeSetting_wallpaper .upload_hover,.themeSetting_wallpaper .unable
-	{
+.themeSetting_wallpaper .upload, .themeSetting_wallpaper .upload_hover,
+	.themeSetting_wallpaper .unable {
 	background: url('../images/wallpaper_upload.gif') no-repeat
 }
 

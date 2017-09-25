@@ -1,11 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
 <html>
 <meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge">
 <head>
-	<t:base type="jquery,easyui"></t:base>
-    <script>
+<t:base type="jquery,easyui"></t:base>
+<script>
     	var select1 = 0;
     	var select2 = 0;
     	var data = "";
@@ -170,39 +171,35 @@
     </script>
 </head>
 <body style="overflow-y: hidden" scroll="no">
-<t:formvalid formid="formobj" layout="table" dialog="false" action="">
-	<table cellpadding="0" width="100%" cellspacing="1" class="formtable">
-		<tr>
-			<td align="right" height="40" width="15%"><span class="filedzt">数据库表名:</span></td>
-			<td class="value" width="30%">
-				<input type="text" class="inuptxt" name="tableName" id="tableName" datatype="*">
-				<span class="Validform_checktip"></span>
-			</td>
+	<t:formvalid formid="formobj" layout="table" dialog="false" action="">
+		<table cellpadding="0" width="100%" cellspacing="1" class="formtable">
+			<tr>
+				<td align="right" height="40" width="15%"><span class="filedzt">数据库表名:</span></td>
+				<td class="value" width="30%"><input type="text"
+					class="inuptxt" name="tableName" id="tableName" datatype="*">
+					<span class="Validform_checktip"></span></td>
 
-			<td align="right" height="40" width="15%"><span class="filedzt">数据ID:</span></td>
-			<td class="value" width="30%">
-				<input type="text" class="inuptxt" name="dataId" id="dataId" datatype="*">
-				<span class="Validform_checktip"></span>
-			</td>
-		</tr>
-		<tr>
-			<td align="right" height="40" width="15%"><span class="filedzt">版本号1:</span></td>
-			<td class="value" width="30%">
-				<input type="text" class="inuptxt" id="versionNumber1" readonly="readonly"/>
-				<span class="Validform_checktip"></span>
-			</td>
+				<td align="right" height="40" width="15%"><span class="filedzt">数据ID:</span></td>
+				<td class="value" width="30%"><input type="text"
+					class="inuptxt" name="dataId" id="dataId" datatype="*"> <span
+					class="Validform_checktip"></span></td>
+			</tr>
+			<tr>
+				<td align="right" height="40" width="15%"><span class="filedzt">版本号1:</span></td>
+				<td class="value" width="30%"><input type="text"
+					class="inuptxt" id="versionNumber1" readonly="readonly" /> <span
+					class="Validform_checktip"></span></td>
 
-			<td align="right" height="40" width="15%"><span class="filedzt">版本号2:</span></td>
-			<td class="value" width="30%">
-				<input type="text" class="inuptxt" id="versionNumber2" readonly="readonly"/>
-				<span class="Validform_checktip"></span>
-			</td>
-		</tr>
-		<tr height="40">
-			<td class="upload" colspan="4">
-				<a href="#" class="easyui-linkbutton" id="btn" iconCls="icon-search" style="float: right; margin-right: 10px;"> 数据比较 &nbsp;&nbsp; </a>
-			</td>
-		</tr>
-	</table>
-</t:formvalid>
+				<td align="right" height="40" width="15%"><span class="filedzt">版本号2:</span></td>
+				<td class="value" width="30%"><input type="text"
+					class="inuptxt" id="versionNumber2" readonly="readonly" /> <span
+					class="Validform_checktip"></span></td>
+			</tr>
+			<tr height="40">
+				<td class="upload" colspan="4"><a href="#"
+					class="easyui-linkbutton" id="btn" iconCls="icon-search"
+					style="float: right; margin-right: 10px;"> 数据比较 &nbsp;&nbsp; </a></td>
+			</tr>
+		</table>
+	</t:formvalid>
 </html>

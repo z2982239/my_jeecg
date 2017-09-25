@@ -1,20 +1,27 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title><t:mutiLang langKey="enhance.js"/></title>
+<title><t:mutiLang langKey="enhance.js" /></title>
 <t:base type="jquery,easyui,tools,DatePicker"></t:base>
 </head>
 <body style="overflow-y: hidden" scroll="no">
-<t:formvalid formid="formobj" dialog="true" usePlugin="password" layout="table" action="cgformEnhanceJsController.do?save" >
-	<input id="id" name="id" type="hidden" value="${cgformenhanceJsPage.id }">
-	<input id="formId" name="formId" type="hidden" value="${cgformenhanceJsPage.formId }">
-	<table cellpadding="0" cellspacing="1" class="formtable">
-		<tr>
-			<td align="right"><label class="Validform_label"> <t:mutiLang langKey="enhance.type"/>: </label></td>
-			<td class="value"><select name="cgJsType" id="cgJsType">
-				<option value="form" <c:if test="${cgformenhanceJsPage.cgJsType=='form'}">selected="selected"</c:if>>form</option>
+	<t:formvalid formid="formobj" dialog="true" usePlugin="password"
+		layout="table" action="cgformEnhanceJsController.do?save">
+		<input id="id" name="id" type="hidden"
+			value="${cgformenhanceJsPage.id }">
+		<input id="formId" name="formId" type="hidden"
+			value="${cgformenhanceJsPage.formId }">
+		<table cellpadding="0" cellspacing="1" class="formtable">
+			<tr>
+				<td align="right"><label class="Validform_label"> <t:mutiLang
+							langKey="enhance.type" />:
+				</label></td>
+				<td class="value"><select name="cgJsType" id="cgJsType">
+						<option value="form"
+							<c:if test="${cgformenhanceJsPage.cgJsType=='form'}">selected="selected"</c:if>>form</option>
 				<option value="list" <c:if test="${cgformenhanceJsPage.cgJsType=='list'}">selected="selected"</c:if>>list</option>
 			</select> <span class="Validform_checktip"></span></td>
 		</tr>

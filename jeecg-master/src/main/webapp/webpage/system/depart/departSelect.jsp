@@ -1,13 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html >
 <html>
 <head>
 <title>组织机构集合</title>
 <t:base type="jquery"></t:base>
-<link rel="stylesheet" type="text/css" href="plug-in/ztree/css/zTreeStyle.css">
-<script type="text/javascript" src="plug-in/ztree/js/jquery.ztree.core-3.5.min.js"></script>
-<script type="text/javascript" src="plug-in/ztree/js/jquery.ztree.excheck-3.5.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="plug-in/ztree/css/zTreeStyle.css">
+<script type="text/javascript"
+	src="plug-in/ztree/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript"
+	src="plug-in/ztree/js/jquery.ztree.excheck-3.5.min.js"></script>
 <script type="text/javascript">
 	var setting = {
 	  check: {
@@ -64,9 +68,9 @@
 </script>
 </head>
 <body style="overflow-y: hidden" scroll="no">
-<input id="orgIds" name="orgIds" type="hidden" value="${orgIds}">
-<ul id="departSelect" class="ztree" style="margin-top: 30px;"></ul>
-<%-- <t:datagrid name="departList" title="common.department.list" actionUrl="departController.do?departSelectDataGrid" idField="id" checkbox="true" showRefresh="false">
+	<input id="orgIds" name="orgIds" type="hidden" value="${orgIds}">
+	<ul id="departSelect" class="ztree" style="margin-top: 30px;"></ul>
+	<%-- <t:datagrid name="departList" title="common.department.list" actionUrl="departController.do?departSelectDataGrid" idField="id" checkbox="true" showRefresh="false">
 	<t:dgCol title="common.id" field="id" hidden="true"></t:dgCol>
 	<t:dgCol title="common.department.name" field="departname" width="50"></t:dgCol>
 </t:datagrid> --%>

@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -9,24 +10,31 @@
   </script>
 </head>
 <body style="overflow-y: hidden" scroll="no">
-<t:formvalid formid="formobj" layout="div" dialog="true" action="functionController.do?saveop">
-	<input name="id" type="hidden" value="${operation.id}">
-	<fieldset class="step">
-        <div class="form">
-            <label class="Validform_label"> <t:mutiLang langKey="operate.name"/>: </label>
-            <input name="operationname" class="inputxt" value="${operation.operationname}" datatype="s2-20">
-            <span class="Validform_checktip"> <t:mutiLang langKey="operatename.rang2to20"/></span>
-        </div>
-        <div class="form">
-            <label class="Validform_label"> <t:mutiLang langKey="operate.code"/>: </label>
-            <input name="operationcode" class="inputxt" value="${operation.operationcode}">
-        </div>
-        <!-- 图标字段现在不用暂时隐藏-->
-        <div class="form" style="display: none;">
-            <label class="Validform_label"> <t:mutiLang langKey="common.icon.name"/>: </label>
-            <select name="TSIcon.id">
-                <c:forEach items="${iconlist}" var="icon">
-                    <option value="${icon.id}" <c:if test="${icon.id==function.TSIcon.id }">selected="selected"</c:if>>${icon.iconName}</option>
+	<t:formvalid formid="formobj" layout="div" dialog="true"
+		action="functionController.do?saveop">
+		<input name="id" type="hidden" value="${operation.id}">
+		<fieldset class="step">
+			<div class="form">
+				<label class="Validform_label"> <t:mutiLang
+						langKey="operate.name" />:
+				</label> <input name="operationname" class="inputxt"
+					value="${operation.operationname}" datatype="s2-20"> <span
+					class="Validform_checktip"> <t:mutiLang
+						langKey="operatename.rang2to20" /></span>
+			</div>
+			<div class="form">
+				<label class="Validform_label"> <t:mutiLang
+						langKey="operate.code" />:
+				</label> <input name="operationcode" class="inputxt"
+					value="${operation.operationcode}">
+			</div>
+			<!-- 图标字段现在不用暂时隐藏-->
+			<div class="form" style="display: none;">
+				<label class="Validform_label"> <t:mutiLang
+						langKey="common.icon.name" />:
+				</label> <select name="TSIcon.id">
+					<c:forEach items="${iconlist}" var="icon">
+						<option value="${icon.id}"<c:if test="${icon.id==function.TSIcon.id }">selected="selected"</c:if>>${icon.iconName}</option>
                 </c:forEach>
             </select>
         </div>

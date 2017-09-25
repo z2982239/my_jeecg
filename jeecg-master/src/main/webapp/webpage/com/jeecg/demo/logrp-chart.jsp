@@ -1,17 +1,19 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
 <t:base type="jquery"></t:base>
-<link rel="stylesheet" type="text/css" href="plug-in/ichart/css/gallery.css"></link>
+<link rel="stylesheet" type="text/css"
+	href="plug-in/ichart/css/gallery.css"></link>
 <script type="text/javascript" src="plug-in/ichart/js/ichart-1.0.js"></script>
 <!-- <script src="webpage/jeecg/cgdynamgraph/core/cgDynamGraphDesignMobile.js"></script> -->
- <style type="text/css">
-	#canvasLineDiv{
-	    position: absolute;
-	    top: 550px;
-	}
+<style type="text/css">
+#canvasLineDiv {
+	position: absolute;
+	top: 550px;
+}
 </style>
 </head>
 <script type="text/javascript">
@@ -105,11 +107,11 @@ $(function(){
 
 </script>
 <body>
-<div style="height:1000px">
-<div id="canvasDiv" style="width: 100%; position: absolute;left:0px"></div>
+	<div style="height: 1000px">
+		<div id="canvasDiv" style="width: 100%; position: absolute; left: 0px"></div>
 
-<div id="canvasLineDiv" style="width: 80%; height:50%"></div>
-</div>
+		<div id="canvasLineDiv" style="width: 80%; height: 50%"></div>
+	</div>
 </body>
 
 </html>

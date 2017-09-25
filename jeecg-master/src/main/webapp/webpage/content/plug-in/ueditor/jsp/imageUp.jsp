@@ -1,15 +1,16 @@
-    <%@ page language="java" contentType="text/html; charset=utf-8"
-             pageEncoding="utf-8"%>
-        <%@ page import="java.util.Properties" %>
-        <%@ page import="java.util.List" %>
-        <%@ page import="java.util.Iterator" %>
-        <%@ page import="java.util.Arrays" %>
-        <%@ page import="java.io.FileInputStream" %>
-        <%@ page import="com.jeecg.p3.ueditor.Uploader" %>
-        <%@ page import="java.io.File" %>
-        <%@ page import="java.util.Map" %>
 
-            <%
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<%@ page import="java.util.Properties"%>
+<%@ page import="java.util.List"%>
+<%@ page import="java.util.Iterator"%>
+<%@ page import="java.util.Arrays"%>
+<%@ page import="java.io.FileInputStream"%>
+<%@ page import="com.jeecg.p3.ueditor.Uploader"%>
+<%@ page import="java.io.File"%>
+<%@ page import="java.util.Map"%>
+
+<%
 
 request.setCharacterEncoding( Uploader.ENCODEING );
 response.setCharacterEncoding( Uploader.ENCODEING );

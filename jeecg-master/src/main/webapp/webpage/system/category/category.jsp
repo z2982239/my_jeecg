@@ -25,20 +25,25 @@
 </script>
 </head>
 <body style="overflow-y: hidden" scroll="no">
-	<t:formvalid formid="formobj" dialog="true" usePlugin="password" layout="table" action="categoryController.do?save">
+	<t:formvalid formid="formobj" dialog="true" usePlugin="password"
+		layout="table" action="categoryController.do?save">
 		<input id="id" name="id" type="hidden" value="${categoryPage.id }">
 		<table style="width: 280px;" cellpadding="0" cellspacing="1"
 			class="formtable">
 			<tr>
 				<td align="right"><label class="Validform_label"> 类型名称:</label></td>
-				<td class="value"><input class="inputxt" id="name" name="name" ignore="ignore" value="${categoryPage.name}"> <span class="Validform_checktip"></span></td>
+				<td class="value"><input class="inputxt" id="name" name="name"
+					ignore="ignore" value="${categoryPage.name}"> <span
+					class="Validform_checktip"></span></td>
 			</tr>
 			<tr>
-				<td align="right"><label class="Validform_label"> <t:mutiLang langKey="common.icon" />:</label></td>
-				<td class="value">
-					<select name="icon.id">
+				<td align="right"><label class="Validform_label"> <t:mutiLang
+							langKey="common.icon" />:
+				</label></td>
+				<td class="value"><select name="icon.id">
 						<c:forEach items="${iconlist}" var="icon">
-							<option value="${icon.id}" <c:if test="${icon.id==categoryPage.icon.id}">selected="selected"</c:if> >
+							<option value="${icon.id}"
+								<c:if test="${icon.id==categoryPage.icon.id}">selected="selected"</c:if> >
 								<t:mutiLang langKey="${icon.iconName}" />
 							</option>
 						</c:forEach>

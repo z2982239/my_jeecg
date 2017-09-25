@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="org.jeecgframework.web.cgform.common.CgAutoListConstant"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html>
@@ -40,7 +41,7 @@ function browseFolder(path) {
 	overflow: hidden;
 }
 
-.table-list td,.table-list th {
+.table-list td, .table-list th {
 	text-align: center;
 }
 
@@ -54,28 +55,37 @@ function browseFolder(path) {
 </style>
 </head>
 <body style="overflow-y: hidden; overflow-x: hidden;" scroll="no">
-<t:formvalid formid="formobj" dialog="true" usePlugin="password" layout="table" tiptype="1" action="generateController.do?dogenerate">
-	<input id="id" name="id" type="hidden" value="${cgFormHeadPage.id}">
-	<input id="tableName" name="tableName" type="hidden" value="${cgFormHeadPage.tableName}">
-	<input type="hidden" id="fieldRowNum" name="fieldRowNum" value="1">
-	<table cellpadding="0" cellspacing="1" class="formtable">
-		<tr>
-			<td align="right"><label class="Validform_label">代码生成目录: </label></td>
-			<td class="value"><input type="text" class="inputxt" value="${projectPath }" name="projectPath" id="projectPath" datatype="*" /> <a href="#" id="openFoldSelect" class="easyui-linkbutton"
-				icon="icon-search" onclick="openFolder('projectPath')">浏览</a></td>
-		</tr>
-		<tr>
-			<td align="right"><label class="Validform_label">代码分层风格: </label></td>
-			<td class="value"><select name="packageStyle">
-				<option value="service">业务分层</option>
-				<option value="project">代码分层</option>
-			</select>
-			</td>
-		</tr>
-		<tr>
-			<td align="right"><label class="Validform_label"> 数据模型: </label></td>
-			<td class="value"><select id="jformType" disabled="disabled" name="jformType">
-				<option value="1" <c:if test="${cgFormHeadPage.jformType eq '1' || cgFormHeadPage.jformType eq '3'}"> selected='selected'</c:if>>单表</option>
+	<t:formvalid formid="formobj" dialog="true" usePlugin="password"
+		layout="table" tiptype="1" action="generateController.do?dogenerate">
+		<input id="id" name="id" type="hidden" value="${cgFormHeadPage.id}">
+		<input id="tableName" name="tableName" type="hidden"
+			value="${cgFormHeadPage.tableName}">
+		<input type="hidden" id="fieldRowNum" name="fieldRowNum" value="1">
+		<table cellpadding="0" cellspacing="1" class="formtable">
+			<tr>
+				<td align="right"><label class="Validform_label">代码生成目录:
+				</label></td>
+				<td class="value"><input type="text" class="inputxt"
+					value="${projectPath }" name="projectPath" id="projectPath"
+					datatype="*" /> <a href="#" id="openFoldSelect"
+					class="easyui-linkbutton" icon="icon-search"
+					onclick="openFolder('projectPath')">浏览</a></td>
+			</tr>
+			<tr>
+				<td align="right"><label class="Validform_label">代码分层风格:
+				</label></td>
+				<td class="value"><select name="packageStyle">
+						<option value="service">业务分层</option>
+						<option value="project">代码分层</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right"><label class="Validform_label"> 数据模型:
+				</label></td>
+				<td class="value"><select id="jformType" disabled="disabled"
+					name="jformType">
+						<option value="1"
+							<c:if test="${cgFormHeadPage.jformType eq '1' || cgFormHeadPage.jformType eq '3'}"> selected='selected'</c:if>>单表</option>
 				<option value="2" <c:if test="${cgFormHeadPage.jformType eq '2'}"> selected="selected"</c:if>>一对多</option>
 			</select></td>
 		</tr>

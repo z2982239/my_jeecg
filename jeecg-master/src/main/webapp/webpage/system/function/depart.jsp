@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@include file="/context/mytags.jsp"%>
 <!DOCTYPE html >
 <html>
@@ -71,7 +72,7 @@
 </script>
 </head>
 <body>
-<table id="treegrid"></table>
+	<table id="treegrid"></table>
 
 
 </body>
